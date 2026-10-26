@@ -1,0 +1,8 @@
+{
+  "projectVersion": 1,
+  "name": "zhi",
+  "description": "纸 · Zhi：基于 Base UI 的中式美学组件库，使用 shadcn Registry 分发源码。",
+  "skills": { "installed": [], "shared": ["frontend-design", "typescript-best-practices"] },
+  "repositories": [],
+  "paths": { "knowledge": "docs", "tmp": "tmp" }
+}

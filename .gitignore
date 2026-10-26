@@ -1,0 +1,7 @@
+node_modules/
+dist/
+public/r/
+public/licenses/
+tmp/
+.env*
+.DS_Store
