@@ -28,14 +28,14 @@ Zhi uses Base UI. Compose triggers with `render={<Button />}`; Radix's `asChild`
 
 Let spacing, alignment and type establish hierarchy. Brush, ink, paper and inkstone inform type, contrast and surfaces rather than requiring literal illustrations. Use Noto Sans SC for controls and body text, and Noto Serif SC sparingly for display headings. Keep primary actions visually clear and group related controls before adding containers.
 
-Use semantic classes such as `bg-background`, `text-foreground`, `border-border` and `text-muted-foreground`. Start with the component's supplied variants. Use the shared 4 px spacing scale and 36 px default controls. Control and panel radius tokens are both 0 px: paper surfaces, buttons and checkboxes have angular outlines; switches and radio controls keep familiar shapes.
+Use semantic classes such as `bg-background`, `text-foreground`, `border-border` and `text-muted-foreground`. Start with the component's supplied variants. Use the shared 4 px spacing scale and 36 px default controls. Control and panel radius tokens are 4 px and 8 px respectively. Use restrained corners for visual consistency; switches and radio controls keep familiar shapes. Do not infer zero-radius controls from the paper metaphor.
 
 Set `data-theme="baizhi"`, `"xuanzhi"`, `"mozhi"` or `"qingzhu"` on the document root so portaled Select and Dialog contents inherit the theme. White Paper draws on snow and paper; Xuan Paper is warmer; Ink Paper is dark; Green Bamboo uses a bamboo-green emphasis. Change theme values together instead of adding unrelated colors to individual controls. In the Zhi repository, edit `design/tokens.json` and regenerate; the bundled assets are a distribution snapshot.
 
 
 Treat ink, paper, seals, bamboo, snow, clouds and rain as optional aesthetic references, not a checklist of illustrations. Build a coherent composition through type, alignment, spacing and color first. Default surfaces are plain; add motifs, paper grain, ruling or the seal variant only when the concrete brief calls for them. Do not infer decorative placement from a component name or theme name.
 
-The Figma snapshot and original component SVGs record the older three-theme, rounded design. Current tokens and component source govern the angular surfaces and Green Bamboo theme. Regenerate bundled references and assets from their project sources rather than editing generated copies.
+The Figma snapshot and original component SVGs record the older three-theme, rounded design. Current tokens and component source govern current geometry and the Green Bamboo theme. Regenerate bundled references and assets from their project sources rather than editing generated copies.
 
 The supported component catalog is limited. When a requested component is missing, state that clearly and compose existing components or use the appropriate Base UI primitive. Do not invent Zhi imports or props.
 

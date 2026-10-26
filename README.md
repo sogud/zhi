@@ -4,6 +4,8 @@ A Base UI component library with Chinese-inspired typography, generous spacing a
 
 Version: **0.3.0 Preview**. [Documentation](https://sogud.github.io/zhi/) · [Components](https://sogud.github.io/zhi/docs/components/) · [Design resources](https://sogud.github.io/zhi/docs/resources/).
 
+[Settings design comparison](https://sogud.github.io/zhi/design-review/): two interactive compositions using the same preferences. Current defaults use 4 px control corners and 8 px panel corners.
+
 ## Preview
 
 https://sogud.github.io/zhi/playground/

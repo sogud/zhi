@@ -5,6 +5,7 @@ import registry from "../registry.json";
 import tokens from "../design/tokens.json";
 import { base, documents, docHref, renderDocument } from "./documents";
 import { ComponentDemo } from "./ComponentDemo";
+import { SettingsStudy } from "./SettingsStudy";
 import { Button } from "@/registry/ui/button";
 import { Badge } from "@/registry/ui/badge";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/registry/ui/card";
@@ -33,8 +34,8 @@ export function DocsApp() {
     try { localStorage.setItem("zhi-theme", theme); } catch { /* The selected theme still works without storage. */ }
   }, [theme]);
   useEffect(() => {
-    window.document.title = document ? `${document.title} · 纸 Zhi` : "纸 · Zhi — 排版有序，留白有度";
-  }, [document]);
+    window.document.title = route === "design-review" ? "设置页设计对照 · 纸 Zhi" : document ? `${document.title} · 纸 Zhi` : "纸 · Zhi — 排版有序，留白有度";
+  }, [document, route]);
 
   async function copyCode(event: MouseEvent<HTMLDivElement>) {
     if (!(event.target instanceof HTMLElement)) return;
@@ -53,7 +54,7 @@ export function DocsApp() {
       <a className="skip-link" href="#main-content">跳到正文</a>
       <header className="docs-header">
         <a href={base} className="brand"><span className="brand-mark">纸</span><span>Zhi</span></a>
-        <nav aria-label="主导航"><a href={docHref("installation")}>文档</a><a href={base + "playground/"}>组件预览</a><a href={docHref("agent-skill")}>Skill</a><a href={site.repository}>GitHub</a></nav>
+        <nav aria-label="主导航"><a href={docHref("installation")}>文档</a><a href={base + "playground/"}>组件预览</a><a href={base + "design-review/"}>设计对照</a><a href={docHref("agent-skill")}>Skill</a><a href={site.repository}>GitHub</a></nav>
         <div className="docs-themes" role="group" aria-label="主题">
           {tokens.themes.map((item) => <button key={item.id} type="button" aria-pressed={theme === item.id} onClick={() => setTheme(item.id)}>{item.name}</button>)}
         </div>
@@ -85,6 +86,8 @@ export function DocsApp() {
           <section className="home-principles"><div><h2>留白</h2><p>给内容足够的空间，分清主次。</p></div><div><h2>对齐</h2><p>从标签到正文，让关系一目了然。</p></div><div><h2>墨色</h2><p>以浓淡表达层级，以朱色标注焦点。</p></div></section>
           <section className="home-bottom"><div><h2>给人用，也给 Agent 用。</h2><p>组件源码、设计 tokens 与 Skill，一起交付。</p></div><a href={docHref("agent-skill")}>了解 Zhi Skill</a><a href={docHref("resources")}>获取设计资源</a></section>
         </main>
+      ) : route === "design-review" ? (
+        <main id="main-content"><SettingsStudy /></main>
       ) : (
         <div className="docs-layout">
           <aside className="docs-sidebar">

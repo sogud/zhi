@@ -7,6 +7,7 @@ The design resources in this directory are released under the project's [MIT lic
 - [White Paper](catalog-baizhi.png), [Xuan Paper](catalog-xuanzhi.png) and [Ink Paper](catalog-mozhi.png) and [Bamboo](catalog-qingzhu.png): rendered 0.3.0 component previews, including the new components.
 - `motifs/` and `textures/`: original bamboo, cloud, rain, snow, seal frame and paper grain.
 - [tokens.json](tokens.json): the source of truth for code themes and dimensions.
+- [Settings comparison](studies/settings-comparison.png): the same reading/writing settings page with 2/4 px and 4/8 px corners. The current component defaults are 4/8 px; the alternative lives in `studies/settings.json`.
 - [preview.png](preview.png): the original 0.1 Figma review board, exported on 2026-10-26.
 - `components/{baizhi,xuanzhi,mozhi}/`: 12 SVG sheets covering Button, Input, Checkbox and Switch variants. Text remains editable and requires Noto Sans SC / Noto Serif SC.
 - [figma-snapshot.json](figma-snapshot.json): 100 Figma variables, their aliases and modes, and six text styles. This is an exported reference, not a second token source or an importable Figma library.

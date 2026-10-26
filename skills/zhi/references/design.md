@@ -20,9 +20,11 @@
 - 正文及控件使用 Noto Sans SC；展示标题少量使用 Noto Serif SC。网页通过 Fontsource 本地依赖加载字体。
 - 正文 14/24，标签 14/20，辅助文字 12/20，章节标题 20/30，展示标题 32/48。
 - 间距基于 4 px，常用 8、12、16、24、32、48、64 px。
-- 默认控件高 36 px，小号高 28 px；控件和组合容器的圆角 token 均为 0 px，使用纸张式直角。
+- 默认控件高 36 px，小号高 28 px；控件默认 4 px 微圆角，容器默认 8 px 微圆角。圆角服务于视觉协调与操作识别，不用“纸的外形”推导所有控件必须直角。
 - Checkbox 保持方正；Switch 与 Radio 保留熟悉的控件形状。几何形状服务于识别和操作，不按纸张外形机械套用。
 - 左边界、文字基线、标签和输入区域保持一致；数值列右对齐。
+
+实际组合的形状对照见[阅读与写作设置页](studies/settings.md)：2/4 px 与 4/8 px 使用相同内容和布局比较。
 
 ## 整体协调与装饰
 
@@ -38,7 +40,7 @@ Figma：主题对照、色彩和文字样式、间距规范、Button、Input、C
 
 代码：16 个组件、四个主题、可交互预览与 Registry 构建。当前目录及组合 API 见 [组件目录](components.md)。
 
-0.2 新增 Textarea、Label、RadioGroup、Select、Card、Badge、Separator、Alert、Progress、Tabs、Accordion、Dialog。当前表单使用 36 px 控件高；卡片和弹窗使用 24 px 内边距，统一采用直角表面。Tabs 通过字色与底边区分选中状态，Accordion 通过间距和分隔线组织内容。Select 和 Dialog 的浮层继承页面主题；键盘、禁用、焦点管理交给 Base UI。
+0.2 新增 Textarea、Label、RadioGroup、Select、Card、Badge、Separator、Alert、Progress、Tabs、Accordion、Dialog。当前表单使用 36 px 控件高；卡片和弹窗使用 24 px 内边距，使用克制的微圆角。Tabs 通过字色与底边区分选中状态，Accordion 通过间距和分隔线组织内容。Select 和 Dialog 的浮层继承页面主题；键盘、禁用、焦点管理交给 Base UI。
 
 Progress 支持明确进度和未知进度；未知进度使用静态短条及文字说明，避免持续动画。Alert 默认是静态提示，动态紧急信息可显式传入 `role="alert"`。朱色用于错误与焦点，状态同时通过文字或语义属性表达。
 
@@ -48,7 +50,7 @@ Progress 支持明确进度和未知进度；未知进度使用静态短条及�
 
 [纸 · Zhi — Component Library](https://www.figma.com/design/XWvrkynXWsb4ezYtAGu6SV?node-id=4-2)
 
-Figma 当前保留 0.1 历史设计：100 个变量、6 个文字样式、12 组主组件、72 个状态变体，覆盖最初四个组件和原有三个主题，仍含旧圆角。新增组件、直角规则、青竹主题与自然素材以当前源码、tokens 和资源目录为准，尚未同步成 Figma 主组件。文件及组件 ID 保存在 `design/figma.json`，后续优先更新已有节点。
+Figma 当前保留 0.1 历史设计：100 个变量、6 个文字样式、12 组主组件、72 个状态变体，覆盖最初四个组件和原有三个主题，仍含旧圆角。新增组件、当前圆角规则、青竹主题与自然素材以当前源码、tokens 和资源目录为准，尚未同步成 Figma 主组件。文件及组件 ID 保存在 `design/figma.json`，后续优先更新已有节点。
 
 Figma 使用本项目自有组件与变量。可访问的社区 UI kit 不属于「纸」的设计资产，不引入其默认视觉规范。
 

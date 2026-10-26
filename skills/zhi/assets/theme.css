@@ -45,8 +45,8 @@
   --zhi-space-8: 32px;
   --zhi-space-12: 48px;
   --zhi-space-16: 64px;
-  --zhi-radius-control: 0px;
-  --zhi-radius-panel: 0px;
+  --zhi-radius-control: 4px;
+  --zhi-radius-panel: 8px;
   --zhi-control-sm: 28px;
   --zhi-control-md: 36px;
   --zhi-check: 16px;

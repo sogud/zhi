@@ -25,13 +25,13 @@
 - [墨纸](https://github.com/sogud/zhi/blob/main/design/catalog-mozhi.png)
 - [青竹](https://github.com/sogud/zhi/blob/main/design/catalog-qingzhu.png)
 
-四张渲染预览覆盖当前 16 个直角组件与四个主题。原有 SVG 图板保留早期圆角设计，覆盖最初的 Button、Input、Checkbox、Switch，可以导入矢量编辑器，文字需要 Noto Sans SC / Noto Serif SC 字体。
+四张渲染预览覆盖当前 16 个组件与四个主题。原有 SVG 图板保留早期圆角设计，覆盖最初的 Button、Input、Checkbox、Switch，可以导入矢量编辑器，文字需要 Noto Sans SC / Noto Serif SC 字体。
 
 ## Figma
 
 [打开纸 · Zhi 设计文件](https://www.figma.com/design/XWvrkynXWsb4ezYtAGu6SV?node-id=4-2)。文件访问权限由 Figma 的共享设置决定。
 
-当前 Figma 文件是最初四个组件、三个主题及旧圆角的历史设计。其余十二个组件已有 React 源码；直角规则、青竹主题与新素材尚未同步到 Figma 主组件。SVG 不保留 Figma 的组件关系、自动布局和变量绑定；当前没有原生 .fig 归档。
+当前 Figma 文件是最初四个组件、三个主题及旧圆角的历史设计。其余十二个组件已有 React 源码；当前圆角规则、青竹主题与新素材尚未同步到 Figma 主组件。SVG 不保留 Figma 的组件关系、自动布局和变量绑定；当前没有原生 .fig 归档。
 
 ## 修改与分发
 
