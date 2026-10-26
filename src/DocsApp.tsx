@@ -13,7 +13,7 @@ import { Label } from "@/registry/ui/label";
 import { Input } from "@/registry/ui/input";
 import { Switch } from "@/registry/ui/switch";
 
-const guides = ["installation", "design", "resources", "skill", "components"];
+const guides = ["installation", "design", "resources", "agent-skill", "components"];
 
 export function DocsApp() {
   const route = decodeURIComponent(location.pathname.slice(base.length)).replace(/\/$/, "");
@@ -54,7 +54,7 @@ export function DocsApp() {
       <a className="skip-link" href="#main-content">跳到正文</a>
       <header className="docs-header">
         <a href={base} className="brand"><span className="brand-mark seal-brand">纸</span><span>Zhi</span></a>
-        <nav aria-label="主导航"><a href={docHref("installation")}>文档</a><a href={base + "playground/"}>组件预览</a><a href={docHref("skill")}>Skill</a><a href={site.repository}>GitHub</a></nav>
+        <nav aria-label="主导航"><a href={docHref("installation")}>文档</a><a href={base + "playground/"}>组件预览</a><a href={docHref("agent-skill")}>Skill</a><a href={site.repository}>GitHub</a></nav>
         <div className="docs-themes" role="group" aria-label="主题">
           {tokens.themes.map((item) => <button key={item.id} type="button" aria-pressed={theme === item.id} onClick={() => setTheme(item.id)}>{item.name}</button>)}
         </div>
@@ -76,7 +76,7 @@ export function DocsApp() {
             </div>
             <a className="nature-resource-link" href={docHref("resources")}>获取原创 SVG 与纸纹素材</a>
           </section>
-          <section className="home-bottom"><div><h2>给人用，也给 Agent 用。</h2><p>组件源码、设计 tokens 与 Skill，一起交付。</p></div><a href={docHref("skill")}>了解 Zhi Skill</a><a href={docHref("resources")}>获取设计资源</a></section>
+          <section className="home-bottom"><div><h2>给人用，也给 Agent 用。</h2><p>组件源码、设计 tokens 与 Skill，一起交付。</p></div><a href={docHref("agent-skill")}>了解 Zhi Skill</a><a href={docHref("resources")}>获取设计资源</a></section>
         </main>
       ) : (
         <div className="docs-layout">

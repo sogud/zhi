@@ -62,7 +62,7 @@ React, Tailwind CSS v4 and shadcn configuration are required. The installer adds
 npx skills add sogud/zhi --skill zhi
 ```
 
-The Skill includes component guides, design rules, tokens, theme CSS and SVG assets. See [Skill usage](docs/skill.md).
+The Skill includes component guides, design rules, tokens, theme CSS and SVG assets. See [Skill usage](docs/agent-skill.md).
 
 ## Documentation hosting
 

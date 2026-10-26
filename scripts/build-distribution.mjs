@@ -46,6 +46,7 @@ copy(join(root, "registry/themes/zhi.css"), join(skill, "assets/theme.css"));
 copy(join(root, "LICENSE"), join(skill, "assets/LICENSE"));
 
 const publicRoot = join(root, "public");
+for (const name of ["design", "skill"]) rmSync(join(publicRoot, name), { recursive: true, force: true });
 copy(join(root, "design"), join(publicRoot, "design"));
 copy(join(root, "LICENSE"), join(publicRoot, "LICENSE"));
 copy(skill, join(publicRoot, "skill"));
