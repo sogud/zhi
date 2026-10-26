@@ -9,7 +9,6 @@
   body {
     margin: 0;
     background: var(--background);
-    background-image: var(--zhi-paper-texture);
     color: var(--foreground);
     font-family: var(--font-sans);
     font-size: 14px;

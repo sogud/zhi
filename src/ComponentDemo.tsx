@@ -17,9 +17,9 @@ import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, D
 
 export function ComponentDemo({ name }: { name: string }) {
   switch (name) {
-    case "button": return <div className="flex flex-wrap gap-4"><Button>保存修改</Button><Button variant="outline">预览</Button><Button variant="seal">落印</Button><Button variant="ghost">取消</Button><Button disabled>暂不可用</Button></div>;
+    case "button": return <div className="flex flex-wrap gap-4"><Button>保存修改</Button><Button variant="outline">预览</Button><Button variant="ghost">取消</Button><Button disabled>暂不可用</Button></div>;
     case "input": return <div className="demo-field"><Label htmlFor="demo-input">作品名称</Label><Input id="demo-input" placeholder="给作品起个名字" /></div>;
-    case "textarea": return <div className="demo-field"><Label htmlFor="demo-textarea">作品简介</Label><Textarea className="zhi-paper-ruled" id="demo-textarea" placeholder="写下你的想法" /></div>;
+    case "textarea": return <div className="demo-field"><Label htmlFor="demo-textarea">作品简介</Label><Textarea id="demo-textarea" placeholder="写下你的想法" /></div>;
     case "label": return <div className="demo-field"><Label htmlFor="demo-label">作者</Label><Input id="demo-label" placeholder="你的名字" /></div>;
     case "checkbox": return <Label className="flex items-center gap-3"><Checkbox defaultChecked />保留阅读进度</Label>;
     case "switch": return <Label className="flex items-center gap-3"><Switch defaultChecked />专注模式</Label>;

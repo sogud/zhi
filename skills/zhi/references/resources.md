@@ -11,12 +11,12 @@
 
 ## 原创自然素材
 
-- [竹](https://github.com/sogud/zhi/blob/main/design/motifs/bamboo.svg)：竹节与少量叶片，适合青竹主题或纵向留白。
-- [云](https://github.com/sogud/zhi/blob/main/design/motifs/cloud.svg)：舒展的横向线条，适合空状态或章节留白。
-- [雨](https://github.com/sogud/zhi/blob/main/design/motifs/rain.svg)：细短斜线，可少量放在进度区旁或文档页边。
-- [雪](https://github.com/sogud/zhi/blob/main/design/motifs/snow.svg)：稀疏点状细节，适合白纸背景与大面积留白。
+- [竹](https://github.com/sogud/zhi/blob/main/design/motifs/bamboo.svg)：竹节与少量叶片。
+- [云](https://github.com/sogud/zhi/blob/main/design/motifs/cloud.svg)：舒展的横向线条。
+- [雨](https://github.com/sogud/zhi/blob/main/design/motifs/rain.svg)：细短斜线。
+- [雪](https://github.com/sogud/zhi/blob/main/design/motifs/snow.svg)：稀疏点状细节。
 
-这些 SVG 是 Zhi 的原创素材，使用 MIT 许可。它们是可选装饰，不自动附加到每个控件；使用时隐藏装饰语义、避免遮挡文字与操作，不用持续粒子动画表达加载状态。
+这些 SVG 是 Zhi 的原创素材，使用 MIT 许可。它们是历史探索中保留的可选素材，不代表 Zhi 默认风格，也不与具体组件绑定；使用时隐藏装饰语义、避免遮挡文字与操作，不用持续粒子动画表达加载状态。
 
 ## 预览
 

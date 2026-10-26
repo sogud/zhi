@@ -15,7 +15,7 @@ export function DialogContent({ className, ...props }: DialogPrimitive.Popup.Pro
       <DialogPrimitive.Popup
         data-slot="dialog-content"
         className={(state) => cn(
-          "zhi-paper fixed left-1/2 top-1/2 z-50 max-h-[calc(100dvh-3rem)] w-[calc(100%-3rem)] max-w-md -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-panel border border-border bg-card p-6 text-card-foreground shadow-sm outline-none",
+          "fixed left-1/2 top-1/2 z-50 max-h-[calc(100dvh-3rem)] w-[calc(100%-3rem)] max-w-md -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-panel border border-border bg-card p-6 text-card-foreground shadow-sm outline-none",
           typeof className === "function" ? className(state) : className,
         )}
         {...props}

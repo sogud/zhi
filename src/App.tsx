@@ -77,7 +77,6 @@ export function App() {
             <p>通过浓淡区分操作层级，让主要动作清楚可见。</p>
             <div className="component-row">
               <Button>保存修改</Button>
-              <Button variant="seal">落印</Button>
               <Button variant="outline">预览</Button>
               <Button variant="ghost">取消</Button>
               <Button disabled>暂不可用</Button>

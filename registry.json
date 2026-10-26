@@ -16,7 +16,7 @@
         "@import \"@fontsource-variable/noto-sans-sc\"": {},
         "@import \"@fontsource-variable/noto-serif-sc\"": {},
         ":root": {
-          "--zhi-palette-paper": "#FAFCFA",
+          "--zhi-palette-paper": "#FCFCFA",
           "--zhi-palette-white": "#FFFFFF",
           "--zhi-palette-paper-soft": "#F2F2EF",
           "--zhi-palette-ink": "#282824",

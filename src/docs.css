@@ -14,26 +14,7 @@
 .home-description { margin: 28px 0; line-height: 2; color: var(--muted-foreground); }
 .home-actions { display: flex; gap: 16px; flex-wrap: wrap; margin: 32px 0 20px; }
 .home-stack { margin: 0; }
-.home-specimen { padding: 28px; background: var(--secondary); display: grid; gap: 20px; border-radius: var(--zhi-radius-panel); }
-.home-specimen { position: relative; background: transparent; }
-.home-specimen::before { content: ""; position: absolute; inset: 52px 16px 46px; border: 1px solid var(--border); background: var(--card); background-image: var(--zhi-paper-texture); transform: rotate(-2deg); }
-.home-specimen > :not(.hero-bamboo) { position: relative; z-index: 1; }
-.home-specimen .hero-bamboo { position: absolute; width: 180px; height: 300px; right: -10px; top: -64px; color: var(--zhi-palette-bamboo-primary); opacity: .22; }
-.seal-brand { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 42px; font-size: 28px; line-height: 1; color: var(--zhi-palette-seal); border: 1px solid currentColor; outline: 1px solid currentColor; outline-offset: -4px; transform: rotate(-2deg); }
-.home-colophon { display: flex; align-items: center; gap: 16px; }
-.small-seal { display: inline-flex; width: 25px; height: 28px; align-items: center; justify-content: center; font-family: var(--font-serif); color: var(--primary-foreground); background: var(--zhi-palette-seal); font-size: 17px; transform: rotate(3deg); }
-.nature-collection { border-top: 1px solid var(--border); padding: 40px 0 48px; }
-.nature-heading h2 { margin: 0 0 12px; font-family: var(--font-serif); font-size: 28px; font-weight: 400; }
-.nature-heading p { font-size: 13px; color: var(--muted-foreground); margin: 0; }
-.nature-studies { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin: 32px 0; }
-.nature-study { padding: 12px 0 12px 24px; border-left: 1px solid var(--border); }
-.nature-study h3 { font-family: var(--font-serif); font-size: 24px; font-weight: 400; margin: 16px 0 8px; }
-.nature-study p { margin: 0 0 8px; font-size: 13px; }
-.nature-study > span:last-child { font-size: 11px; color: var(--muted-foreground); }
-.nature-study .nature-motif { color: var(--muted-foreground); }
-.nature-study-bamboo .nature-motif { color: var(--zhi-palette-bamboo-primary); }
-.nature-study-snow .nature-motif { color: var(--muted-foreground); opacity: .6; }
-.nature-resource-link { font-size: 12px; text-decoration: underline; text-underline-offset: 5px; }
+.home-specimen { display: grid; align-content: center; }
 .home-setting { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 24px; font-weight: 400; }
 .home-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px; padding: 40px 0 48px; border-top: 1px solid var(--border); }
 .home-principles h2 { font-family: var(--font-serif); font-size: 24px; font-weight: 400; margin: 0 0 12px; }
@@ -92,10 +73,6 @@
   .home-hero { padding: 40px 0; }
   .home-principles { gap: 28px; }
   .home-principles h2 { font-size: 20px; }
-  .home-specimen .hero-bamboo { width: 140px; height: 220px; right: 0; top: -30px; }
-  .nature-studies { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
-  .nature-study { padding-left: 16px; }
-  .nature-study .nature-motif { width: 96px; height: 80px; }
   .home-bottom { flex-wrap: wrap; gap: 24px; }
   .home-bottom div { width: 100%; }
   .docs-layout { display: block; }

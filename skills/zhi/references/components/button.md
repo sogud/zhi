@@ -18,7 +18,6 @@ import { Button } from "@/components/ui/button"
 <div className="flex gap-3">
   <Button>保存修改</Button>
   <Button variant="outline">预览</Button>
-  <Button variant="seal">落印</Button>
   <Button variant="ghost" disabled>取消</Button>
 </div>
 ```
