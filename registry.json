@@ -1,12 +1,12 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "z",
+  "name": "zhi",
   "homepage": "https://sogud-z.round-wasp-3180.chatgpt.site",
   "items": [
     {
       "name": "theme",
       "type": "registry:style",
-      "title": "纸 · Z Themes",
+      "title": "纸 · Zhi Themes",
       "description": "白纸、宣纸、墨纸的语义色彩、尺寸与字体。",
       "dependencies": [
         "@fontsource-variable/noto-sans-sc",
@@ -171,7 +171,7 @@
         {
           "path": "LICENSE",
           "type": "registry:file",
-          "target": "licenses/z/LICENSE"
+          "target": "licenses/zhi/LICENSE"
         }
       ]
     },
@@ -198,8 +198,8 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "@z/utils",
-        "@z/theme"
+        "@zhi/utils",
+        "@zhi/theme"
       ],
       "files": [
         {
@@ -216,8 +216,8 @@
         "@base-ui/react"
       ],
       "registryDependencies": [
-        "@z/utils",
-        "@z/theme"
+        "@zhi/utils",
+        "@zhi/theme"
       ],
       "files": [
         {
@@ -234,8 +234,8 @@
         "@base-ui/react"
       ],
       "registryDependencies": [
-        "@z/utils",
-        "@z/theme"
+        "@zhi/utils",
+        "@zhi/theme"
       ],
       "files": [
         {
@@ -252,8 +252,8 @@
         "@base-ui/react"
       ],
       "registryDependencies": [
-        "@z/utils",
-        "@z/theme"
+        "@zhi/utils",
+        "@zhi/theme"
       ],
       "files": [
         {

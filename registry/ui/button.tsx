@@ -26,7 +26,7 @@ const buttonVariants = cva(
   },
 );
 
-export function ZButton({
+export function Button({
   className,
   variant,
   size,

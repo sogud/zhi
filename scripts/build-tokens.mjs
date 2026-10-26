@@ -57,7 +57,7 @@ const catalog = JSON.parse(await readFile(catalogPath, "utf8"));
 const themeItem = catalog.items.find((item) => item.name === "theme");
 if (!themeItem) throw new Error("Missing theme registry item");
 themeItem.files = [
-  { path: "LICENSE", type: "registry:file", target: "licenses/z/LICENSE" },
+  { path: "LICENSE", type: "registry:file", target: "licenses/zhi/LICENSE" },
 ];
 themeItem.css = {
   '@import "@fontsource-variable/noto-sans-sc"': {},

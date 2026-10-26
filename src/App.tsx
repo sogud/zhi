@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import tokens from "../design/tokens.json";
-import { ZButton } from "@/registry/ui/button";
-import { ZInput } from "@/registry/ui/input";
-import { ZCheckbox } from "@/registry/ui/checkbox";
-import { ZSwitch } from "@/registry/ui/switch";
+import { Button } from "@/registry/ui/button";
+import { Input } from "@/registry/ui/input";
+import { Checkbox } from "@/registry/ui/checkbox";
+import { Switch } from "@/registry/ui/switch";
 
 export function App() {
   const [theme, setTheme] = useState("baizhi");
@@ -11,7 +11,7 @@ export function App() {
   const [enabled, setEnabled] = useState(true);
   const [saved, setSaved] = useState(false);
   const registryConfig = JSON.stringify(
-    { registries: { "@z": `${window.location.origin}/r/{name}.json` } },
+    { registries: { "@zhi": "http://127.0.0.1:5173/r/{name}.json" } },
     null,
     2,
   );
@@ -24,7 +24,7 @@ export function App() {
       <header className="site-header">
         <a className="brand" href="#">
           <span className="brand-mark">纸</span>
-          <span>Z</span>
+          <span>Zhi</span>
         </a>
         <nav aria-label="主题" className="theme-nav">
           {tokens.themes.map((item) => (
@@ -41,7 +41,7 @@ export function App() {
         <a href="#install">安装组件</a>
       </header>
       <section className="intro">
-        <p className="intro-meta">纸 · Z 0.1.0 Preview</p>
+        <p className="intro-meta">纸 · Zhi 0.1.1 Preview</p>
         <h1>
           让重要的事，
           <br />
@@ -65,31 +65,31 @@ export function App() {
           <section id="button" className="specimen">
             <div className="section-heading">
               <h2>按钮</h2>
-              <span>ZButton</span>
+              <span>Button</span>
             </div>
             <p>通过浓淡区分操作层级，让主要动作清楚可见。</p>
             <div className="component-row">
-              <ZButton>保存修改</ZButton>
-              <ZButton variant="outline">预览</ZButton>
-              <ZButton variant="ghost">取消</ZButton>
-              <ZButton disabled>暂不可用</ZButton>
+              <Button>保存修改</Button>
+              <Button variant="outline">预览</Button>
+              <Button variant="ghost">取消</Button>
+              <Button disabled>暂不可用</Button>
             </div>
             <div className="component-row">
-              <ZButton size="sm">小号按钮</ZButton>
-              <ZButton variant="outline" size="sm">
+              <Button size="sm">小号按钮</Button>
+              <Button variant="outline" size="sm">
                 小号次要
-              </ZButton>
+              </Button>
             </div>
           </section>
           <section id="input" className="specimen">
             <div className="section-heading">
               <h2>输入框</h2>
-              <span>ZInput</span>
+              <span>Input</span>
             </div>
             <div className="input-grid">
               <div className="field">
                 <label htmlFor="work-name">作品名称</label>
-                <ZInput
+                <Input
                   id="work-name"
                   placeholder="给作品起个名字"
                   aria-describedby="work-name-help"
@@ -98,9 +98,9 @@ export function App() {
               </div>
               <div className="field">
                 <label htmlFor="work-link">链接</label>
-                <ZInput
+                <Input
                   id="work-link"
-                  defaultValue="z"
+                  defaultValue="zhi"
                   aria-invalid="true"
                   aria-describedby="link-error"
                 />
@@ -119,17 +119,17 @@ export function App() {
               React + Tailwind CSS v4。试用站目前仅拥有者可访问，CLI
               安装请使用本地 Registry。
             </p>
-            <p>在 components.json 中配置 Registry 地址：</p>
+            <p>先在组件库项目运行 pnpm dev，再在使用者项目的 components.json 中配置：</p>
             <pre className="code-example">
               <code>{registryConfig}</code>
             </pre>
             <pre className="code-example">
-              <code>pnpm dlx shadcn@latest add @z/button</code>
+              <code>pnpm dlx shadcn@latest add @zhi/button</code>
             </pre>
             <pre className="code-example">
               <code>
                 {
-                  'import { ZButton } from "@/components/ui/button"\n\n<ZButton>保存修改</ZButton>'
+                  'import { Button } from "@/components/ui/button"\n\n<Button>保存修改</Button>'
                 }
               </code>
             </pre>
@@ -137,15 +137,15 @@ export function App() {
           <section id="selection" className="specimen">
             <div className="section-heading">
               <h2>选择控件</h2>
-              <span>ZCheckbox · ZSwitch</span>
+              <span>Checkbox · Switch</span>
             </div>
             <div className="selection-grid">
               <label className="selection-label">
-                <ZCheckbox checked={checked} onCheckedChange={setChecked} />
+                <Checkbox checked={checked} onCheckedChange={setChecked} />
                 保留阅读进度
               </label>
               <label className="selection-label">
-                <ZSwitch checked={enabled} onCheckedChange={setEnabled} />
+                <Switch checked={enabled} onCheckedChange={setEnabled} />
                 专注模式
               </label>
             </div>
@@ -165,23 +165,23 @@ export function App() {
                   <strong>记住上次的位置</strong>
                   <small>下次打开时，从离开的地方继续。</small>
                 </span>
-                <ZSwitch defaultChecked />
+                <Switch defaultChecked />
               </label>
               <div className="settings-footer">
                 <p role="status">
                   {saved ? "已保存阅读偏好。" : "只在需要时显示操作。"}
                 </p>
-                <ZButton onClick={() => setSaved(true)}>保存偏好</ZButton>
+                <Button onClick={() => setSaved(true)}>保存偏好</Button>
               </div>
             </div>
           </section>
         </div>
       </div>
       <footer className="site-footer">
-        <span>纸 · Z</span>
+        <span>纸 · Zhi</span>
         <span>Base UI · shadcn Registry</span>
         <a href="/licenses/NOTICE.txt">许可证</a>
-        <span>0.1.0 Preview</span>
+        <span>0.1.1 Preview</span>
       </footer>
     </main>
   );

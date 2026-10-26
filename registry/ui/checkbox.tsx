@@ -3,7 +3,7 @@
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
 import { cn } from "@/registry/lib/utils";
 
-export function ZCheckbox({
+export function Checkbox({
   className,
   ...props
 }: CheckboxPrimitive.Root.Props) {

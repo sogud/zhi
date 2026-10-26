@@ -3,7 +3,7 @@
 import { Input as InputPrimitive } from "@base-ui/react/input";
 import { cn } from "@/registry/lib/utils";
 
-export function ZInput({ className, ...props }: InputPrimitive.Props) {
+export function Input({ className, ...props }: InputPrimitive.Props) {
   return (
     <InputPrimitive
       data-slot="input"

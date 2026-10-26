@@ -3,7 +3,7 @@
 import { Switch as SwitchPrimitive } from "@base-ui/react/switch";
 import { cn } from "@/registry/lib/utils";
 
-export function ZSwitch({ className, ...props }: SwitchPrimitive.Root.Props) {
+export function Switch({ className, ...props }: SwitchPrimitive.Root.Props) {
   return (
     <SwitchPrimitive.Root
       data-slot="switch"

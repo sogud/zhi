@@ -7,12 +7,12 @@ const manifest = JSON.parse(
 const directory = new URL("public/licenses/", root);
 await mkdir(directory, { recursive: true });
 await writeFile(
-  new URL("Z-MIT.txt", directory),
+  new URL("Zhi-MIT.txt", directory),
   await readFile(new URL("LICENSE", root)),
 );
 const notices = [
-  "纸 · Z 0.1.0",
-  "Z components: MIT — Z-MIT.txt",
+  `纸 · Zhi ${manifest.version}`,
+  "Zhi components: MIT — Zhi-MIT.txt",
   "",
   "Bundled runtime dependencies and font licenses:",
 ];
