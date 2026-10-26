@@ -1,0 +1,197 @@
+/* Generated from design/tokens.json. Run pnpm tokens:build. */
+:root {
+  --zhi-palette-paper: #FAFCFA;
+  --zhi-palette-white: #FFFFFF;
+  --zhi-palette-paper-soft: #F2F2EF;
+  --zhi-palette-ink: #282824;
+  --zhi-palette-ink-hover: #404039;
+  --zhi-palette-gray: #65655E;
+  --zhi-palette-line: #DDDDD5;
+  --zhi-palette-input-line: #8F8F85;
+  --zhi-palette-xuan: #F5F4F0;
+  --zhi-palette-xuan-surface: #FAF9F6;
+  --zhi-palette-xuan-soft: #EDEAE2;
+  --zhi-palette-xuan-ink: #2B2B27;
+  --zhi-palette-xuan-muted: #666159;
+  --zhi-palette-xuan-line: #D4CEC3;
+  --zhi-palette-xuan-input: #938B7E;
+  --zhi-palette-night: #20221F;
+  --zhi-palette-night-surface: #282B26;
+  --zhi-palette-night-soft: #32362F;
+  --zhi-palette-night-text: #F1EEE6;
+  --zhi-palette-night-muted: #B3B3A9;
+  --zhi-palette-night-line: #484E43;
+  --zhi-palette-night-input: #838B79;
+  --zhi-palette-night-primary: #E6E4DA;
+  --zhi-palette-night-hover: #D3D1C6;
+  --zhi-palette-seal: #A33D34;
+  --zhi-palette-seal-light: #E49A8C;
+  --zhi-palette-error: #AE3633;
+  --zhi-palette-error-light: #F19A91;
+  --zhi-palette-bamboo-paper: #F4F7F1;
+  --zhi-palette-bamboo-surface: #FCFDF9;
+  --zhi-palette-bamboo-soft: #E5ECDF;
+  --zhi-palette-bamboo-ink: #26382C;
+  --zhi-palette-bamboo-muted: #586A5D;
+  --zhi-palette-bamboo-line: #CDD7C7;
+  --zhi-palette-bamboo-input: #7B907D;
+  --zhi-palette-bamboo-primary: #365B40;
+  --zhi-palette-bamboo-hover: #294833;
+  --zhi-space-1: 4px;
+  --zhi-space-2: 8px;
+  --zhi-space-3: 12px;
+  --zhi-space-4: 16px;
+  --zhi-space-6: 24px;
+  --zhi-space-8: 32px;
+  --zhi-space-12: 48px;
+  --zhi-space-16: 64px;
+  --zhi-radius-control: 0px;
+  --zhi-radius-panel: 0px;
+  --zhi-control-sm: 28px;
+  --zhi-control-md: 36px;
+  --zhi-check: 16px;
+  --zhi-switch-width: 32px;
+  --zhi-switch-height: 20px;
+  --zhi-type-display-size: 64px;
+  --zhi-type-display-line-height: 80px;
+  --zhi-type-title-size: 32px;
+  --zhi-type-title-line-height: 48px;
+  --zhi-type-heading-size: 20px;
+  --zhi-type-heading-line-height: 30px;
+  --zhi-type-body-size: 14px;
+  --zhi-type-body-line-height: 24px;
+  --zhi-type-label-size: 14px;
+  --zhi-type-label-line-height: 20px;
+  --zhi-type-caption-size: 12px;
+  --zhi-type-caption-line-height: 20px;
+  --font-sans: "Noto Sans SC Variable", "PingFang SC", sans-serif;
+  --font-serif: "Noto Serif SC Variable", "Songti SC", serif;
+  --radius: var(--zhi-radius-control);
+  --zhi-paper-texture: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%0A%20%20%3Cfilter%20id%3D%22grain%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.72%22%20numOctaves%3D%223%22%20seed%3D%2217%22%20stitchTiles%3D%22stitch%22%2F%3E%0A%20%20%20%20%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%0A%20%20%20%20%3CfeComponentTransfer%3E%3CfeFuncA%20type%3D%22linear%22%20slope%3D%22.055%22%2F%3E%3C%2FfeComponentTransfer%3E%0A%20%20%3C%2Ffilter%3E%0A%20%20%3Cpath%20fill%3D%22%23777%22%20filter%3D%22url(%23grain)%22%20d%3D%22M0%200h180v180H0z%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+.zhi-paper {
+  background-image: var(--zhi-paper-texture);
+}
+
+.zhi-paper-ruled {
+  background-image: linear-gradient(to bottom, transparent 23px, var(--border) 23px, var(--border) 24px), var(--zhi-paper-texture);
+  background-size: 100% 24px, 180px 180px;
+  background-position: 0 8px, 0 0;
+}
+
+:root, [data-theme="baizhi"] {
+  color-scheme: light;
+  --background: var(--zhi-palette-paper);
+  --foreground: var(--zhi-palette-ink);
+  --card: var(--zhi-palette-white);
+  --card-foreground: var(--zhi-palette-ink);
+  --primary: var(--zhi-palette-ink);
+  --primary-hover: var(--zhi-palette-ink-hover);
+  --primary-foreground: var(--zhi-palette-white);
+  --secondary: var(--zhi-palette-paper-soft);
+  --secondary-foreground: var(--zhi-palette-ink);
+  --muted: var(--zhi-palette-paper-soft);
+  --muted-foreground: var(--zhi-palette-gray);
+  --accent: var(--zhi-palette-paper-soft);
+  --accent-foreground: var(--zhi-palette-ink);
+  --border: var(--zhi-palette-line);
+  --input: var(--zhi-palette-input-line);
+  --ring: var(--zhi-palette-seal);
+  --destructive: var(--zhi-palette-error);
+  --marker: var(--zhi-palette-seal);
+  --destructive-foreground: var(--zhi-palette-white);
+}
+
+[data-theme="xuanzhi"] {
+  color-scheme: light;
+  --background: var(--zhi-palette-xuan);
+  --foreground: var(--zhi-palette-xuan-ink);
+  --card: var(--zhi-palette-xuan-surface);
+  --card-foreground: var(--zhi-palette-xuan-ink);
+  --primary: var(--zhi-palette-xuan-ink);
+  --primary-hover: var(--zhi-palette-ink-hover);
+  --primary-foreground: var(--zhi-palette-xuan-surface);
+  --secondary: var(--zhi-palette-xuan-soft);
+  --secondary-foreground: var(--zhi-palette-xuan-ink);
+  --muted: var(--zhi-palette-xuan-soft);
+  --muted-foreground: var(--zhi-palette-xuan-muted);
+  --accent: var(--zhi-palette-xuan-soft);
+  --accent-foreground: var(--zhi-palette-xuan-ink);
+  --border: var(--zhi-palette-xuan-line);
+  --input: var(--zhi-palette-xuan-input);
+  --ring: var(--zhi-palette-seal);
+  --destructive: var(--zhi-palette-error);
+  --marker: var(--zhi-palette-seal);
+  --destructive-foreground: var(--zhi-palette-white);
+}
+
+[data-theme="mozhi"] {
+  color-scheme: dark;
+  --background: var(--zhi-palette-night);
+  --foreground: var(--zhi-palette-night-text);
+  --card: var(--zhi-palette-night-surface);
+  --card-foreground: var(--zhi-palette-night-text);
+  --primary: var(--zhi-palette-night-primary);
+  --primary-hover: var(--zhi-palette-night-hover);
+  --primary-foreground: var(--zhi-palette-night);
+  --secondary: var(--zhi-palette-night-soft);
+  --secondary-foreground: var(--zhi-palette-night-text);
+  --muted: var(--zhi-palette-night-soft);
+  --muted-foreground: var(--zhi-palette-night-muted);
+  --accent: var(--zhi-palette-night-soft);
+  --accent-foreground: var(--zhi-palette-night-text);
+  --border: var(--zhi-palette-night-line);
+  --input: var(--zhi-palette-night-input);
+  --ring: var(--zhi-palette-seal-light);
+  --destructive: var(--zhi-palette-error-light);
+  --marker: var(--zhi-palette-seal-light);
+  --destructive-foreground: var(--zhi-palette-night);
+}
+
+[data-theme="qingzhu"] {
+  color-scheme: light;
+  --background: var(--zhi-palette-bamboo-paper);
+  --foreground: var(--zhi-palette-bamboo-ink);
+  --card: var(--zhi-palette-bamboo-surface);
+  --card-foreground: var(--zhi-palette-bamboo-ink);
+  --primary: var(--zhi-palette-bamboo-primary);
+  --primary-hover: var(--zhi-palette-bamboo-hover);
+  --primary-foreground: var(--zhi-palette-white);
+  --secondary: var(--zhi-palette-bamboo-soft);
+  --secondary-foreground: var(--zhi-palette-bamboo-ink);
+  --muted: var(--zhi-palette-bamboo-soft);
+  --muted-foreground: var(--zhi-palette-bamboo-muted);
+  --accent: var(--zhi-palette-bamboo-soft);
+  --accent-foreground: var(--zhi-palette-bamboo-ink);
+  --border: var(--zhi-palette-bamboo-line);
+  --input: var(--zhi-palette-bamboo-input);
+  --ring: var(--zhi-palette-bamboo-primary);
+  --destructive: var(--zhi-palette-error);
+  --marker: var(--zhi-palette-bamboo-primary);
+  --destructive-foreground: var(--zhi-palette-white);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-marker: var(--marker);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --radius-control: var(--zhi-radius-control);
+  --radius-panel: var(--zhi-radius-panel);
+}

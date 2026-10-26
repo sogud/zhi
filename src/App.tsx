@@ -13,7 +13,7 @@ export function App() {
   const [enabled, setEnabled] = useState(true);
   const [saved, setSaved] = useState(false);
   const registryConfig = JSON.stringify(
-    { registries: { "@zhi": "http://127.0.0.1:5173/r/{name}.json" } },
+    { registries: { "@zhi": "https://sogud.github.io/zhi/r/{name}.json" } },
     null,
     2,
   );
@@ -43,7 +43,7 @@ export function App() {
         <a href="#install">安装组件</a>
       </header>
       <section className="intro">
-        <p className="intro-meta">纸 · Zhi 0.2.0 Preview · {registry.items.filter((item) => item.type === "registry:ui").length} 个组件</p>
+        <p className="intro-meta">纸 · Zhi 0.3.0 Preview · {registry.items.filter((item) => item.type === "registry:ui").length} 个组件</p>
         <h1>
           让重要的事，
           <br />
@@ -77,6 +77,7 @@ export function App() {
             <p>通过浓淡区分操作层级，让主要动作清楚可见。</p>
             <div className="component-row">
               <Button>保存修改</Button>
+              <Button variant="seal">落印</Button>
               <Button variant="outline">预览</Button>
               <Button variant="ghost">取消</Button>
               <Button disabled>暂不可用</Button>
@@ -165,10 +166,9 @@ export function App() {
               <span>shadcn Registry</span>
             </div>
             <p>
-              React + Tailwind CSS v4。试用站目前仅拥有者可访问，CLI
-              安装请使用本地 Registry。
+              React + Tailwind CSS v4。通过公开 Registry 安装组件源码。
             </p>
-            <p>先在组件库项目运行 pnpm dev，再在使用者项目的 components.json 中配置：</p>
+            <p>在使用者项目的 components.json 中合并配置：</p>
             <pre className="code-example">
               <code>{registryConfig}</code>
             </pre>
@@ -188,8 +188,8 @@ export function App() {
       <footer className="site-footer">
         <span>纸 · Zhi</span>
         <span>Base UI · shadcn Registry</span>
-        <a href="/licenses/NOTICE.txt">许可证</a>
-        <span>0.2.0 Preview</span>
+        <a href={`${import.meta.env.BASE_URL}licenses/NOTICE.txt`}>许可证</a>
+        <span>0.3.0 Preview</span>
       </footer>
     </main>
   );

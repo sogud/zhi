@@ -5,3 +5,9 @@ public/licenses/
 tmp/
 .env*
 .DS_Store
+public/design/
+public/downloads/
+public/skill/
+public/LICENSE
+public/llms*.txt
+.openai/

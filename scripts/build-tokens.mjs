@@ -19,7 +19,15 @@ for (const [name, value] of Object.entries(tokens.typography)) {
 root["--font-sans"] = '"Noto Sans SC Variable", "PingFang SC", sans-serif';
 root["--font-serif"] = '"Noto Serif SC Variable", "Songti SC", serif';
 root["--radius"] = "var(--zhi-radius-control)";
+const paperTexture = await readFile(new URL("../design/textures/paper-grain.svg", import.meta.url), "utf8");
+root["--zhi-paper-texture"] = `url("data:image/svg+xml,${encodeURIComponent(paperTexture)}")`;
 const rules = { ":root": root };
+rules[".zhi-paper"] = { "background-image": "var(--zhi-paper-texture)" };
+rules[".zhi-paper-ruled"] = {
+  "background-image": "linear-gradient(to bottom, transparent 23px, var(--border) 23px, var(--border) 24px), var(--zhi-paper-texture)",
+  "background-size": "100% 24px, 180px 180px",
+  "background-position": "0 8px, 0 0",
+};
 for (const [index, theme] of tokens.themes.entries()) {
   const selector =
     index === 0

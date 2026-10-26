@@ -1,6 +1,6 @@
 /* Generated from design/tokens.json. Run pnpm tokens:build. */
 :root {
-  --zhi-palette-paper: #FCFCFA;
+  --zhi-palette-paper: #FAFCFA;
   --zhi-palette-white: #FFFFFF;
   --zhi-palette-paper-soft: #F2F2EF;
   --zhi-palette-ink: #282824;
@@ -28,6 +28,15 @@
   --zhi-palette-seal-light: #E49A8C;
   --zhi-palette-error: #AE3633;
   --zhi-palette-error-light: #F19A91;
+  --zhi-palette-bamboo-paper: #F4F7F1;
+  --zhi-palette-bamboo-surface: #FCFDF9;
+  --zhi-palette-bamboo-soft: #E5ECDF;
+  --zhi-palette-bamboo-ink: #26382C;
+  --zhi-palette-bamboo-muted: #586A5D;
+  --zhi-palette-bamboo-line: #CDD7C7;
+  --zhi-palette-bamboo-input: #7B907D;
+  --zhi-palette-bamboo-primary: #365B40;
+  --zhi-palette-bamboo-hover: #294833;
   --zhi-space-1: 4px;
   --zhi-space-2: 8px;
   --zhi-space-3: 12px;
@@ -36,8 +45,8 @@
   --zhi-space-8: 32px;
   --zhi-space-12: 48px;
   --zhi-space-16: 64px;
-  --zhi-radius-control: 6px;
-  --zhi-radius-panel: 12px;
+  --zhi-radius-control: 0px;
+  --zhi-radius-panel: 0px;
   --zhi-control-sm: 28px;
   --zhi-control-md: 36px;
   --zhi-check: 16px;
@@ -58,6 +67,17 @@
   --font-sans: "Noto Sans SC Variable", "PingFang SC", sans-serif;
   --font-serif: "Noto Serif SC Variable", "Songti SC", serif;
   --radius: var(--zhi-radius-control);
+  --zhi-paper-texture: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%0A%20%20%3Cfilter%20id%3D%22grain%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.72%22%20numOctaves%3D%223%22%20seed%3D%2217%22%20stitchTiles%3D%22stitch%22%2F%3E%0A%20%20%20%20%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%0A%20%20%20%20%3CfeComponentTransfer%3E%3CfeFuncA%20type%3D%22linear%22%20slope%3D%22.055%22%2F%3E%3C%2FfeComponentTransfer%3E%0A%20%20%3C%2Ffilter%3E%0A%20%20%3Cpath%20fill%3D%22%23777%22%20filter%3D%22url(%23grain)%22%20d%3D%22M0%200h180v180H0z%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+.zhi-paper {
+  background-image: var(--zhi-paper-texture);
+}
+
+.zhi-paper-ruled {
+  background-image: linear-gradient(to bottom, transparent 23px, var(--border) 23px, var(--border) 24px), var(--zhi-paper-texture);
+  background-size: 100% 24px, 180px 180px;
+  background-position: 0 8px, 0 0;
 }
 
 :root, [data-theme="baizhi"] {
@@ -127,6 +147,29 @@
   --destructive: var(--zhi-palette-error-light);
   --marker: var(--zhi-palette-seal-light);
   --destructive-foreground: var(--zhi-palette-night);
+}
+
+[data-theme="qingzhu"] {
+  color-scheme: light;
+  --background: var(--zhi-palette-bamboo-paper);
+  --foreground: var(--zhi-palette-bamboo-ink);
+  --card: var(--zhi-palette-bamboo-surface);
+  --card-foreground: var(--zhi-palette-bamboo-ink);
+  --primary: var(--zhi-palette-bamboo-primary);
+  --primary-hover: var(--zhi-palette-bamboo-hover);
+  --primary-foreground: var(--zhi-palette-white);
+  --secondary: var(--zhi-palette-bamboo-soft);
+  --secondary-foreground: var(--zhi-palette-bamboo-ink);
+  --muted: var(--zhi-palette-bamboo-soft);
+  --muted-foreground: var(--zhi-palette-bamboo-muted);
+  --accent: var(--zhi-palette-bamboo-soft);
+  --accent-foreground: var(--zhi-palette-bamboo-ink);
+  --border: var(--zhi-palette-bamboo-line);
+  --input: var(--zhi-palette-bamboo-input);
+  --ring: var(--zhi-palette-bamboo-primary);
+  --destructive: var(--zhi-palette-error);
+  --marker: var(--zhi-palette-bamboo-primary);
+  --destructive-foreground: var(--zhi-palette-white);
 }
 
 @theme inline {

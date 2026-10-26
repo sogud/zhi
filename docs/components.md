@@ -1,6 +1,6 @@
 # Components
 
-Zhi 0.2.0 has 16 installable components. Subcomponents are included with their parent Registry item. All components use the same White Paper, Xuan Paper and Ink Paper theme tokens.
+Zhi 0.2.0 has 16 installable components. Subcomponents are included with their parent Registry item. All components use the same White Paper, Xuan Paper, Ink Paper and Bamboo theme tokens.
 
 | Component | Registry item | Exports |
 | --- | --- | --- |

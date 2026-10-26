@@ -33,7 +33,7 @@ export function SelectContent({ className, children, ...props }: SelectPrimitive
         <SelectPrimitive.Popup
           data-slot="select-content"
           className={(state) => cn(
-            "max-h-[var(--available-height)] min-w-[var(--anchor-width)] max-w-[calc(100vw-2rem)] overflow-y-auto rounded-control border border-border bg-card p-1 text-card-foreground shadow-md outline-none",
+            "zhi-paper max-h-[var(--available-height)] min-w-[var(--anchor-width)] max-w-[calc(100vw-2rem)] overflow-y-auto rounded-control border border-border bg-card p-1 text-card-foreground shadow-sm outline-none",
             typeof className === "function" ? className(state) : className,
           )}
           {...props}

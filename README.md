@@ -1,14 +1,14 @@
 # 纸 · Zhi
 
-A Base UI component library with Chinese-inspired typography, generous spacing and three paper themes. Components are distributed as source through a shadcn Registry.
+A Base UI component library with Chinese-inspired typography, generous spacing and four paper themes. Components are distributed as source through a shadcn Registry.
 
-Version: **0.2.0 Preview**. The hosted trial is owner-private; anonymous CLI access is not available yet.
+Version: **0.3.0 Preview**. [Documentation](https://sogud.github.io/zhi/) · [Components](https://sogud.github.io/zhi/docs/components/) · [Design resources](https://sogud.github.io/zhi/docs/resources/).
 
 ## Preview
 
-https://sogud-z.round-wasp-3180.chatgpt.site
+https://sogud.github.io/zhi/playground/
 
-White Paper (白纸), Xuan Paper (宣纸) and Ink Paper (墨纸) share the same component structure. Change `data-theme` to `baizhi`, `xuanzhi` or `mozhi`.
+White Paper (白纸), Xuan Paper (宣纸), Ink Paper (墨纸) and Bamboo (青竹) share the same component structure. Change `data-theme` to `baizhi`, `xuanzhi`, `mozhi` or `qingzhu`.
 
 Includes **16 components**: Button, Input, Textarea, Label, Checkbox, RadioGroup, Switch, Select, Card, Badge, Separator, Alert, Progress, Tabs, Accordion and Dialog. See the [component catalog and usage](docs/components.md). Compound exports such as CardTitle and DialogContent belong to their parent component and are not counted separately.
 
@@ -20,14 +20,16 @@ pnpm build
 pnpm dev
 ```
 
+Node.js 24, pnpm and `zip` are required for the complete documentation/distribution build. `pnpm build` regenerates the Registry, bundled Skill references/assets, downloads and static documentation pages. The maintained Skill entrypoint is `skills/zhi/SKILL.md`; generated references and assets are committed so skills CLI installs work without a build.
+
 ## Install components
 
-Start the local registry and add this entry to the consuming project’s `components.json`:
+Merge this entry into the consuming project’s `components.json`:
 
 ```json
 {
   "registries": {
-    "@zhi": "http://127.0.0.1:5173/r/{name}.json"
+    "@zhi": "https://sogud.github.io/zhi/r/{name}.json"
   }
 }
 ```
@@ -53,6 +55,18 @@ React, Tailwind CSS v4 and shadcn configuration are required. The installer adds
 - `registry/ui/` contains the distributable components; the preview imports the same files.
 - [Design specification](docs/design.md).
 - [Open design resources](design/README.md): theme tokens, Figma variable and text-style snapshot, component SVGs and a preview board.
+
+## Agent Skill
+
+```sh
+npx skills add sogud/zhi --skill zhi
+```
+
+The Skill includes component guides, design rules, tokens, theme CSS and SVG assets. See [Skill usage](docs/skill.md).
+
+## Documentation hosting
+
+GitHub Actions builds and deploys the site to GitHub Pages on pushes to main. Pages uses `/zhi/` as Vite's base path. To check the same build locally, run `DOCS_BASE_PATH=/zhi/ pnpm build`. For a custom domain, change the base path, `site.json`, Registry URLs and the Skill's installation reference together.
 
 ## License
 

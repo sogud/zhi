@@ -16,6 +16,8 @@ const buttonVariants = cva(
         ghost: "bg-transparent text-foreground enabled:hover:bg-accent",
         destructive:
           "bg-destructive text-destructive-foreground enabled:hover:opacity-90",
+        seal:
+          "border-[var(--zhi-palette-seal)] bg-[var(--zhi-palette-seal)] text-white shadow-[inset_0_0_0_2px_var(--zhi-palette-seal),inset_0_0_0_3px_#ffffff66] enabled:hover:opacity-90",
       },
       size: {
         default: "h-[var(--zhi-control-md)]",

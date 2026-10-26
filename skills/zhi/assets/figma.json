@@ -1,0 +1,12 @@
+{
+  "fileKey": "XWvrkynXWsb4ezYtAGu6SV",
+  "url": "https://www.figma.com/design/XWvrkynXWsb4ezYtAGu6SV?node-id=4-2",
+  "reviewNodeId": "4:2",
+  "pageId": "0:1",
+  "componentSets": {
+    "baizhi": { "Button": "3:14", "Input": "3:31", "Checkbox": "3:40", "Switch": "3:47" },
+    "xuanzhi": { "Button": "3:64", "Input": "3:81", "Checkbox": "3:90", "Switch": "3:97" },
+    "mozhi": { "Button": "3:114", "Input": "3:131", "Checkbox": "3:140", "Switch": "3:147" }
+  },
+  "status": "design-draft"
+}
