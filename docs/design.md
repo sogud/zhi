@@ -1,6 +1,6 @@
 # 纸 · Zhi 设计规范
 
-状态：第一轮探索，供评审与修改；对应 0.1.1 Preview，不是完整组件库。
+状态：0.2.0 Preview，16 个可安装组件；仍是早期版本。
 
 纸以排版、留白、对齐和墨色层次表达中式美学。控件保持清楚、熟悉的交互方式。朱色只用于少量标记、焦点与必要提示。
 
@@ -26,7 +26,11 @@
 
 Figma：主题对照、色彩和文字样式、间距规范、Button、Input、Checkbox、Switch 的可编辑组件及状态示例。基础组件的主组件与评审实例分区保存。
 
-代码：同名组件的起步实现、三个主题、组件预览、Registry 构建。扩展组件在确定本轮视觉方向后逐步加入。
+代码：16 个组件、三个主题、可交互预览与 Registry 构建。当前目录及组合 API 见 [组件目录](components.md)。
+
+0.2 新增 Textarea、Label、RadioGroup、Select、Card、Badge、Separator、Alert、Progress、Tabs、Accordion、Dialog。表单延续 36 px 控件高、6 px 圆角；卡片和弹窗使用 24 px 内边距、12 px 圆角。Tabs 通过字色与底边区分选中状态，Accordion 通过间距和分隔线组织内容。Select 和 Dialog 的浮层继承页面主题；键盘、禁用、焦点管理交给 Base UI。
+
+Progress 支持明确进度和未知进度；未知进度使用静态短条及文字说明，避免持续动画。Alert 默认是静态提示，动态紧急信息可显式传入 `role="alert"`。朱色用于错误与焦点，状态同时通过文字或语义属性表达。
 
 首轮评审检查：中英文和长标签可读；默认、焦点、禁用与错误状态有区别；主题切换后主要操作清楚；留白与对齐在真实组合中成立。
 
@@ -34,7 +38,7 @@ Figma：主题对照、色彩和文字样式、间距规范、Button、Input、C
 
 [纸 · Zhi — Component Library](https://www.figma.com/design/XWvrkynXWsb4ezYtAGu6SV?node-id=4-2)
 
-100 个变量、6 个文字样式、12 组主组件、72 个状态变体。评审区域使用组件实例；主组件在右侧独立排列。文件及组件 ID 保存在 `design/figma.json`，后续优先更新已有节点。
+Figma 当前保留 0.1 设计：100 个变量、6 个文字样式、12 组主组件、72 个状态变体，覆盖最初的四个组件。0.2 新增组件以可运行代码和 `design/catalog-*.png` 三主题预览为准，尚未补成 Figma 主组件。文件及组件 ID 保存在 `design/figma.json`，后续优先更新已有节点。
 
 Figma 使用本项目自有组件与变量。可访问的社区 UI kit 不属于「纸」的设计资产，不引入其默认视觉规范。
 

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import tokens from "../design/tokens.json";
+import registry from "../registry.json";
+import { ExpandedSpecimens } from "./ExpandedSpecimens";
 import { Button } from "@/registry/ui/button";
 import { Input } from "@/registry/ui/input";
 import { Checkbox } from "@/registry/ui/checkbox";
@@ -41,7 +43,7 @@ export function App() {
         <a href="#install">安装组件</a>
       </header>
       <section className="intro">
-        <p className="intro-meta">纸 · Zhi 0.1.1 Preview</p>
+        <p className="intro-meta">纸 · Zhi 0.2.0 Preview · {registry.items.filter((item) => item.type === "registry:ui").length} 个组件</p>
         <h1>
           让重要的事，
           <br />
@@ -58,6 +60,11 @@ export function App() {
           <a href="#button">按钮</a>
           <a href="#input">输入框</a>
           <a href="#selection">选择控件</a>
+          <a href="#forms">表单补充</a>
+          <a href="#content">内容与层次</a>
+          <a href="#feedback">反馈</a>
+          <a href="#navigation">切换与展开</a>
+          <a href="#dialog">对话框</a>
           <a href="#composition">组合示例</a>
           <a href="#install">安装组件</a>
         </aside>
@@ -110,30 +117,6 @@ export function App() {
               </div>
             </div>
           </section>
-          <section id="install" className="specimen">
-            <div className="section-heading">
-              <h2>安装组件</h2>
-              <span>shadcn Registry</span>
-            </div>
-            <p>
-              React + Tailwind CSS v4。试用站目前仅拥有者可访问，CLI
-              安装请使用本地 Registry。
-            </p>
-            <p>先在组件库项目运行 pnpm dev，再在使用者项目的 components.json 中配置：</p>
-            <pre className="code-example">
-              <code>{registryConfig}</code>
-            </pre>
-            <pre className="code-example">
-              <code>pnpm dlx shadcn@latest add @zhi/button</code>
-            </pre>
-            <pre className="code-example">
-              <code>
-                {
-                  'import { Button } from "@/components/ui/button"\n\n<Button>保存修改</Button>'
-                }
-              </code>
-            </pre>
-          </section>
           <section id="selection" className="specimen">
             <div className="section-heading">
               <h2>选择控件</h2>
@@ -150,6 +133,7 @@ export function App() {
               </label>
             </div>
           </section>
+          <ExpandedSpecimens />
           <section id="composition" className="specimen">
             <div className="section-heading">
               <h2>组合示例</h2>
@@ -175,13 +159,37 @@ export function App() {
               </div>
             </div>
           </section>
+          <section id="install" className="specimen">
+            <div className="section-heading">
+              <h2>安装组件</h2>
+              <span>shadcn Registry</span>
+            </div>
+            <p>
+              React + Tailwind CSS v4。试用站目前仅拥有者可访问，CLI
+              安装请使用本地 Registry。
+            </p>
+            <p>先在组件库项目运行 pnpm dev，再在使用者项目的 components.json 中配置：</p>
+            <pre className="code-example">
+              <code>{registryConfig}</code>
+            </pre>
+            <pre className="code-example">
+              <code>pnpm dlx shadcn@latest add @zhi/button</code>
+            </pre>
+            <pre className="code-example">
+              <code>
+                {
+                  'import { Button } from "@/components/ui/button"\n\n<Button>保存修改</Button>'
+                }
+              </code>
+            </pre>
+          </section>
         </div>
       </div>
       <footer className="site-footer">
         <span>纸 · Zhi</span>
         <span>Base UI · shadcn Registry</span>
         <a href="/licenses/NOTICE.txt">许可证</a>
-        <span>0.1.1 Preview</span>
+        <span>0.2.0 Preview</span>
       </footer>
     </main>
   );

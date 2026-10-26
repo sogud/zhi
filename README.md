@@ -2,7 +2,7 @@
 
 A Base UI component library with Chinese-inspired typography, generous spacing and three paper themes. Components are distributed as source through a shadcn Registry.
 
-Version: **0.1.1 Preview**. The hosted trial is owner-private; anonymous CLI access is not available yet.
+Version: **0.2.0 Preview**. The hosted trial is owner-private; anonymous CLI access is not available yet.
 
 ## Preview
 
@@ -10,7 +10,7 @@ https://sogud-z.round-wasp-3180.chatgpt.site
 
 White Paper (白纸), Xuan Paper (宣纸) and Ink Paper (墨纸) share the same component structure. Change `data-theme` to `baizhi`, `xuanzhi` or `mozhi`.
 
-Included: `Button`, `Input`, `Checkbox`, `Switch`. This is an early preview, with a limited component catalog.
+Includes **16 components**: Button, Input, Textarea, Label, Checkbox, RadioGroup, Switch, Select, Card, Badge, Separator, Alert, Progress, Tabs, Accordion and Dialog. See the [component catalog and usage](docs/components.md). Compound exports such as CardTitle and DialogContent belong to their parent component and are not counted separately.
 
 ## Local development
 
@@ -34,6 +34,8 @@ Start the local registry and add this entry to the consuming project’s `compon
 
 ```sh
 pnpm dlx shadcn@latest add @zhi/button
+# Install several components together:
+pnpm dlx shadcn@latest add @zhi/select @zhi/dialog @zhi/tabs
 ```
 
 ```tsx
