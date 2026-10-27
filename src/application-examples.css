@@ -1,0 +1,80 @@
+.application-examples { padding: 48px 0 56px; }
+.examples-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 32px; }
+.examples-heading p { margin: 0 0 12px; font-size: 12px; color: var(--muted-foreground); }
+.examples-heading h1 { margin: 0 0 16px; font-family: var(--font-serif); font-size: clamp(28px, 4vw, 36px); font-weight: 400; line-height: 1.5; }
+.examples-heading span, .examples-heading > a { font-size: 13px; color: var(--muted-foreground); line-height: 1.8; }
+.examples-heading > a { text-decoration: underline; text-underline-offset: 4px; white-space: nowrap; }
+.examples-app { background: var(--card); border: 1px solid var(--border); border-radius: var(--zhi-radius-panel); overflow: hidden; }
+.examples-app-title { display: flex; align-items: baseline; gap: 16px; padding: 20px 28px 0; }
+.examples-app-title > span:first-child { font-family: var(--font-serif); font-size: 22px; }
+.examples-app-title > span:last-child { font-size: 12px; color: var(--muted-foreground); }
+.examples-tabs { padding: 8px 28px 0; }
+.examples-note { margin: 20px 0 0; font-size: 12px; line-height: 1.8; color: var(--muted-foreground); }
+.reading-workspace { display: grid; grid-template-columns: 244px minmax(0, 1fr); }
+.reading-sidebar { padding: 28px 20px; border-right: 1px solid var(--border); }
+.example-section-label { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+.example-section-label h2 { margin: 0; font-size: 14px; font-weight: 500; }
+.reading-sidebar nav { display: grid; gap: 8px; margin: 20px 0 24px; }
+.reading-sidebar .reading-entry { display: flex; flex-direction: column; align-items: flex-start; height: auto; padding: 10px 8px; gap: 6px; text-align: left; white-space: normal; }
+.reading-entry > span { font-size: 13px; font-weight: 400; line-height: 1.8; }
+.reading-entry > small { font-size: 11px; font-weight: 400; color: var(--muted-foreground); }
+.reading-entry[aria-current=page] { background: var(--secondary); }
+.reading-completion { margin: 24px 0; }
+.reading-completion p { margin: 0 0 12px; font-size: 12px; color: var(--muted-foreground); }
+.reading-main { padding: 28px 40px 40px; min-width: 0; }
+.reading-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.example-inline-label { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 400; }
+.reading-article { max-width: 40em; margin: 32px auto; }
+.reading-article h2 { margin: 0 0 12px; font-family: var(--font-serif); font-size: clamp(24px, 3vw, 30px); line-height: 1.6; font-weight: 400; }
+.reading-article .reading-meta { margin: 0 0 28px; font-family: var(--font-sans); font-size: 12px; color: var(--muted-foreground); }
+.reading-article > p { font-family: var(--font-serif); font-size: 16px; line-height: 2.1; margin: 20px 0; }
+.reading-pagination { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.reading-pagination > div { display: flex; gap: 8px; }
+.reading-workspace.is-focused { grid-template-columns: 1fr; }
+.reading-workspace.is-focused .reading-sidebar { display: none; }
+.reading-workspace.is-focused .reading-main { width: 100%; max-width: 800px; margin: auto; }
+.example-help, .example-error { margin: 10px 0 0; font-size: 12px; line-height: 1.8; }
+.example-help { color: var(--muted-foreground); }
+.example-error { color: var(--destructive); }
+.draft-workspace { padding: 32px 40px 40px; }
+.draft-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 28px; }
+.draft-heading h2 { font-size: 24px; font-weight: 500; margin: 0 0 8px; }
+.draft-heading p { color: var(--muted-foreground); font-size: 13px; margin: 0; }
+.draft-filters { display: grid; grid-template-columns: minmax(0, 1fr) 160px; gap: 16px; margin-bottom: 24px; }
+.draft-selection { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+.draft-list { list-style: none; padding: 0; margin: 0; }
+.draft-list > li { display: grid; grid-template-columns: 16px minmax(0, 1fr) auto; gap: 20px; align-items: start; padding: 24px 0; border-bottom: 1px solid var(--border); }
+.draft-list > li > [data-slot=checkbox] { margin-top: 5px; }
+.draft-copy { min-width: 0; }
+.draft-copy h3 { font-size: 15px; font-weight: 500; line-height: 1.8; margin: 0 0 8px; overflow-wrap: anywhere; }
+.draft-copy > p { font-size: 13px; color: var(--muted-foreground); margin: 0 0 12px; line-height: 1.9; overflow-wrap: anywhere; }
+.draft-copy > div { display: flex; align-items: center; gap: 12px; }
+.draft-copy > div > span:last-child { font-size: 11px; color: var(--muted-foreground); }
+.draft-actions { display: flex; gap: 8px; }
+.draft-count { font-size: 12px; color: var(--muted-foreground); margin: 16px 0 32px; }
+.draft-editor { display: grid; gap: 10px; }
+.draft-editor .example-help, .draft-editor .example-error { margin: 0 0 8px; }
+.example-empty { padding: 16px 0; font-size: 13px; color: var(--muted-foreground); line-height: 1.9; }
+.example-empty h3 { color: var(--foreground); font-size: 16px; font-weight: 500; }
+.draft-empty { padding: 40px 0; text-align: center; }
+@media (max-width: 760px) {
+  .examples-heading { display: block; }
+  .examples-heading > a { display: inline-block; margin-top: 16px; }
+  .reading-workspace { grid-template-columns: 1fr; }
+  .reading-sidebar { border-right: 0; border-bottom: 1px solid var(--border); padding: 24px; }
+  .reading-sidebar nav { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .reading-main, .draft-workspace { padding: 24px; }
+  .draft-heading { align-items: flex-start; }
+  .draft-list > li { gap: 12px; }
+  .draft-actions { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .application-examples { padding-top: 32px; }
+  .reading-sidebar nav { grid-template-columns: 1fr; }
+  .examples-app-title, .examples-tabs { padding-left: 20px; padding-right: 20px; }
+  .reading-sidebar, .reading-main, .draft-workspace { padding: 20px; }
+  .reading-pagination { flex-wrap: wrap; }
+  .draft-filters { grid-template-columns: 1fr; gap: 12px; }
+  .draft-heading h2 { font-size: 20px; }
+  .draft-heading p { max-width: 13em; }
+}

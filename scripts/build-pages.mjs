@@ -16,7 +16,7 @@ function discover(directory) {
   }
 }
 discover(join(root, "docs"));
-const urls = [site.url, site.url + "playground/", site.url + "design-review/"];
+const urls = [site.url, site.url + "playground/", site.url + "design-review/", site.url + "examples/"];
 for (const path of entries) {
   const markdown = readFileSync(path, "utf8");
   const slug = relative(join(root, "docs"), path).replace(/\.md$/, "");
@@ -34,6 +34,8 @@ mkdirSync(join(output, "playground"), { recursive: true });
 cpSync(join(output, "index.html"), join(output, "playground/index.html"));
 mkdirSync(join(output, "design-review"), { recursive: true });
 writeFileSync(join(output, "design-review/index.html"), html.replace(/<title>.*?<\/title>/, "<title>设置页设计对照 · 纸 Zhi</title>"));
+mkdirSync(join(output, "examples"), { recursive: true });
+writeFileSync(join(output, "examples/index.html"), html.replace(/<title>.*?<\/title>/, "<title>应用示例 · 纸 Zhi</title>"));
 writeFileSync(join(output, "404.html"), html);
 writeFileSync(join(output, ".nojekyll"), "");
 writeFileSync(join(output, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((url) => `<url><loc>${url}</loc></url>`).join("")}</urlset>`);

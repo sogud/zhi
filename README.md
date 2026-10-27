@@ -6,6 +6,8 @@ Version: **0.3.0 Preview**. [Documentation](https://sogud.github.io/zhi/) · [Co
 
 [Settings design comparison](https://sogud.github.io/zhi/design-review/): two interactive compositions using the same preferences. Current defaults use 4 px control corners and 8 px panel corners.
 
+[Application examples](https://sogud.github.io/zhi/examples/): reading, per-article notes and draft management built from the existing components.
+
 ## Preview
 
 https://sogud.github.io/zhi/playground/

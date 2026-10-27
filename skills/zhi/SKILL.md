@@ -12,6 +12,7 @@ Use Zhi's source-distributed components and paper themes. React and Tailwind CSS
 
 - Installing components: [installation](references/installation.md). Read the consuming project's `components.json` and package manager first; use its aliases and CSS entrypoint.
 - Choosing components or composing a screen: [component catalog](references/components.md), then `references/components/<registry-name>.md` for each component you will use. The catalog lists supported exports; verify installed source before assuming an API.
+- Complete compositions: [reading and draft management](references/studies/application-examples.md) shows how controls, validation, selection, overlays and feedback work together. Adapt the composition to the user's task rather than adding every component.
 - Designing or restyling a screen: [design language](references/design.md). Use [tokens](assets/tokens.json) for exact palette, spacing, dimensions and typography.
 - Visual references: `assets/preview.png` and `assets/components/{baizhi,xuanzhi,mozhi}/*.svg`. The SVGs cover the original four components; the twelve newer components are documented in the component references.
 - Optional nature details: `assets/motifs/{bamboo,cloud,rain,snow}.svg`. Read the design reference before placing them; they are decoration, not component state indicators.
