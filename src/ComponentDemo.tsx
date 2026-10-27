@@ -1,3 +1,6 @@
+import { TooltipDemo, PopoverDemo, DropdownMenuDemo } from "./demos/OverlayDemos";
+import { CollapsibleDemo, SliderDemo, ToggleDemo, ToggleGroupDemo } from "./demos/ControlDemos";
+import { AvatarDemo, SkeletonDemo, TableDemo } from "./demos/ContentDemos";
 import { Button } from "@/registry/ui/button";
 import { Input } from "@/registry/ui/input";
 import { Textarea } from "@/registry/ui/textarea";
@@ -33,6 +36,16 @@ export function ComponentDemo({ name }: { name: string }) {
     case "tabs": return <Tabs defaultValue="overview" className="w-full"><TabsList aria-label="作品信息"><TabsTrigger value="overview">概览</TabsTrigger><TabsTrigger value="details">详情</TabsTrigger></TabsList><TabsContent value="overview">用清楚的结构，呈现作品的主要信息。</TabsContent><TabsContent value="details">支持中英文、长标题与多段正文。</TabsContent></Tabs>;
     case "accordion": return <Accordion defaultValue={["themes"]} className="w-full"><AccordionItem value="themes"><AccordionTrigger>三个主题可以自由切换吗？</AccordionTrigger><AccordionContent>可以。在文档根节点设置 data-theme，颜色会随语义变量一起切换。</AccordionContent></AccordionItem><AccordionItem value="source"><AccordionTrigger>安装后可以修改组件吗？</AccordionTrigger><AccordionContent>可以。组件以源码分发，你可以按项目需要修改。</AccordionContent></AccordionItem></Accordion>;
     case "dialog": return <Dialog><DialogTrigger render={<Button variant="outline" />}>打开对话框</DialogTrigger><DialogContent><DialogTitle>留一点空白</DialogTitle><DialogDescription>这是一个对话框示例。按 Escape 或点击关闭按钮返回。</DialogDescription><DialogFooter><DialogClose render={<Button />}>关闭</DialogClose></DialogFooter></DialogContent></Dialog>;
+    case "tooltip": return <TooltipDemo />;
+    case "popover": return <PopoverDemo />;
+    case "dropdown-menu": return <DropdownMenuDemo />;
+    case "collapsible": return <CollapsibleDemo />;
+    case "slider": return <SliderDemo />;
+    case "toggle": return <ToggleDemo />;
+    case "toggle-group": return <ToggleGroupDemo />;
+    case "avatar": return <AvatarDemo />;
+    case "skeleton": return <SkeletonDemo />;
+    case "table": return <TableDemo />;
     default: return null;
   }
 }

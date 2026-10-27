@@ -14,7 +14,7 @@ Use Zhi's source-distributed components and paper themes. React and Tailwind CSS
 - Choosing components or composing a screen: [component catalog](references/components.md), then `references/components/<registry-name>.md` for each component you will use. The catalog lists supported exports; verify installed source before assuming an API.
 - Complete compositions: [reading and draft management](references/studies/application-examples.md) shows how controls, validation, selection, overlays and feedback work together. Adapt the composition to the user's task rather than adding every component.
 - Designing or restyling a screen: [design language](references/design.md). Use [tokens](assets/tokens.json) for exact palette, spacing, dimensions and typography.
-- Visual references: `assets/preview.png` and `assets/components/{baizhi,xuanzhi,mozhi}/*.svg`. The SVGs cover the original four components; the twelve newer components are documented in the component references.
+- Visual references: `assets/preview.png` and `assets/components/{baizhi,xuanzhi,mozhi}/*.svg`. The SVGs cover the original four components; additional components are documented in the component references.
 - Optional nature details: `assets/motifs/{bamboo,cloud,rain,snow}.svg`. Read the design reference before placing them; they are decoration, not component state indicators.
 
 ## Install and compose
@@ -31,7 +31,7 @@ Let spacing, alignment and type establish hierarchy. Brush, ink, paper and inkst
 
 Use semantic classes such as `bg-background`, `text-foreground`, `border-border` and `text-muted-foreground`. Start with the component's supplied variants. Use the shared 4 px spacing scale and 36 px default controls. Control and panel radius tokens are 4 px and 8 px respectively. Use restrained corners for visual consistency; switches and radio controls keep familiar shapes. Do not infer zero-radius controls from the paper metaphor.
 
-Set `data-theme="baizhi"`, `"xuanzhi"`, `"mozhi"` or `"qingzhu"` on the document root so portaled Select and Dialog contents inherit the theme. White Paper draws on snow and paper; Xuan Paper is warmer; Ink Paper is dark; Green Bamboo uses a bamboo-green emphasis. Change theme values together instead of adding unrelated colors to individual controls. In the Zhi repository, edit `design/tokens.json` and regenerate; the bundled assets are a distribution snapshot.
+Set `data-theme="baizhi"`, `"xuanzhi"`, `"mozhi"` or `"qingzhu"` on the document root so portaled floating contents inherit the theme. White Paper draws on snow and paper; Xuan Paper is warmer; Ink Paper is dark; Green Bamboo uses a bamboo-green emphasis. Change theme values together instead of adding unrelated colors to individual controls. In the Zhi repository, edit `design/tokens.json` and regenerate; the bundled assets are a distribution snapshot.
 
 
 Treat ink, paper, seals, bamboo, snow, clouds and rain as optional aesthetic references, not a checklist of illustrations. Build a coherent composition through type, alignment, spacing and color first. Default surfaces are plain; add motifs, paper grain, ruling or the seal variant only when the concrete brief calls for them. Do not infer decorative placement from a component name or theme name.

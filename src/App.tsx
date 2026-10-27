@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import tokens from "../design/tokens.json";
 import registry from "../registry.json";
+import { MoreSpecimens } from "./MoreSpecimens";
 import { ExpandedSpecimens } from "./ExpandedSpecimens";
 import { Button } from "@/registry/ui/button";
 import { Input } from "@/registry/ui/input";
@@ -65,6 +66,9 @@ export function App() {
           <a href="#feedback">反馈</a>
           <a href="#navigation">切换与展开</a>
           <a href="#dialog">对话框</a>
+          <a href="#more-overlays">浮层与操作</a>
+          <a href="#more-controls">调节与展开</a>
+          <a href="#more-content">信息与加载</a>
           <a href="#composition">组合示例</a>
           <a href="#install">安装组件</a>
         </aside>
@@ -134,6 +138,7 @@ export function App() {
             </div>
           </section>
           <ExpandedSpecimens />
+          <MoreSpecimens />
           <section id="composition" className="specimen">
             <div className="section-heading">
               <h2>组合示例</h2>

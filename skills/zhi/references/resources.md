@@ -25,7 +25,7 @@
 - [墨纸](https://github.com/sogud/zhi/blob/main/design/catalog-mozhi.png)
 - [青竹](https://github.com/sogud/zhi/blob/main/design/catalog-qingzhu.png)
 
-四张渲染预览覆盖当前 16 个组件与四个主题。原有 SVG 图板保留早期圆角设计，覆盖最初的 Button、Input、Checkbox、Switch，可以导入矢量编辑器，文字需要 Noto Sans SC / Noto Serif SC 字体。
+四张渲染预览记录扩充前的 16 个组件与四个主题；新增组件见文档页的实时预览。原有 SVG 图板保留早期圆角设计，覆盖最初的 Button、Input、Checkbox、Switch，可以导入矢量编辑器，文字需要 Noto Sans SC / Noto Serif SC 字体。
 
 ## Figma
 

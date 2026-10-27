@@ -13,7 +13,7 @@ npx skills add sogud/zhi --skill zhi
 ## 包含内容
 
 - SKILL.md：什么时候使用 Zhi、如何发现组件、如何组合和验证。
-- references：安装指南、设计规范、组件目录与 16 个独立组件指南。
+- references：安装指南、设计规范、组件目录与 26 个独立组件指南。
 - assets：主题 tokens、生成的主题 CSS、四个原始组件的三主题 SVG、设计预览与 MIT 许可。
 
 入口文件保持简短，具体组件参考按需加载。素材和参考文件从项目的 design、docs 与 registry 构建生成，与官网使用同一份来源。
@@ -30,7 +30,7 @@ npx skills add sogud/zhi --skill zhi
 请先检查项目已有组件和别名，保留本地修改。
 ```
 
-Skill 只影响 Agent 如何完成已授权的任务，不授予发布、上传或修改账户的权限。当前目录只有 16 个组件，Skill 会明确处理尚未提供的组件，而不是虚构导入。
+Skill 只影响 Agent 如何完成已授权的任务，不授予发布、上传或修改账户的权限。当前目录只有 26 个组件，Skill 会明确处理尚未提供的组件，而不是虚构导入。
 
 ## 开源参考
 

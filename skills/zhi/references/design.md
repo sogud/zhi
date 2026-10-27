@@ -1,6 +1,6 @@
 # 纸 · Zhi 设计规范
 
-状态：0.3.0 Preview，16 个可安装组件；仍是早期版本。
+状态：0.3.0 Preview，26 个可安装组件；仍是早期版本。
 
 纸以排版、留白、对齐和墨色层次建立统一风格。先协调字重、比例、间距和操作层级，再考虑局部装饰。笔墨纸砚、印章、竹、雪、云、雨是可探索的审美参考，不是官网或组件必须出现的图案清单。
 
@@ -40,7 +40,7 @@
 
 Figma：主题对照、色彩和文字样式、间距规范、Button、Input、Checkbox、Switch 的可编辑组件及状态示例。基础组件的主组件与评审实例分区保存。
 
-代码：16 个组件、四个主题、可交互预览与 Registry 构建。当前目录及组合 API 见 [组件目录](components.md)。
+代码：26 个组件、四个主题、可交互预览与 Registry 构建。当前目录及组合 API 见 [组件目录](components.md)。
 
 0.2 新增 Textarea、Label、RadioGroup、Select、Card、Badge、Separator、Alert、Progress、Tabs、Accordion、Dialog。当前表单使用 36 px 控件高；卡片和弹窗使用 24 px 内边距，使用克制的微圆角。Tabs 通过字色与底边区分选中状态，Accordion 通过间距和分隔线组织内容。Select 和 Dialog 的浮层继承页面主题；键盘、禁用、焦点管理交给 Base UI。
 

@@ -1,6 +1,6 @@
 # Components
 
-Zhi 0.2.0 has 16 installable components. Subcomponents are included with their parent Registry item. All components use the same White Paper, Xuan Paper, Ink Paper and Bamboo theme tokens.
+Zhi 0.3.0 Preview has 26 installable components. Subcomponents are included with their parent Registry item. All components use the same White Paper, Xuan Paper, Ink Paper and Bamboo theme tokens.
 
 | Component | Registry item | Exports |
 | --- | --- | --- |
@@ -20,8 +20,18 @@ Zhi 0.2.0 has 16 installable components. Subcomponents are included with their p
 | Tabs | `@zhi/tabs` | Tabs, TabsList, TabsTrigger, TabsContent |
 | Accordion | `@zhi/accordion` | Accordion, AccordionItem, AccordionTrigger, AccordionContent |
 | Dialog | `@zhi/dialog` | Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogFooter, DialogClose |
+| Tooltip | `@zhi/tooltip` | TooltipProvider, Tooltip, TooltipTrigger, TooltipContent |
+| Popover | `@zhi/popover` | Popover, PopoverTrigger, PopoverContent, PopoverTitle, PopoverDescription, PopoverClose |
+| DropdownMenu | `@zhi/dropdown-menu` | DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuGroup, DropdownMenuCheckboxItem, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuLabel |
+| Collapsible | `@zhi/collapsible` | Collapsible, CollapsibleTrigger, CollapsibleContent |
+| Slider | `@zhi/slider` | Slider, SliderLabel, SliderValue, SliderControl, SliderTrack, SliderRange, SliderThumb |
+| Toggle | `@zhi/toggle` | Toggle |
+| ToggleGroup | `@zhi/toggle-group` | ToggleGroup, ToggleGroupItem |
+| Avatar | `@zhi/avatar` | Avatar, AvatarImage, AvatarFallback |
+| Skeleton | `@zhi/skeleton` | Skeleton |
+| Table | `@zhi/table` | Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption |
 
-See the [installation instructions](../README.md#install-components) before using these examples. Imports use `@/components/ui/<registry-item>` in the consuming project. The [working examples](../src/ExpandedSpecimens.tsx) show all twelve additions together.
+See the [installation instructions](../README.md#install-components) before using these examples. Imports use `@/components/ui/<registry-item>` in the consuming project. The [component preview](https://sogud.github.io/zhi/playground/) includes live examples for every component.
 
 ## Form controls
 
@@ -103,3 +113,17 @@ Tabs delegates selection and arrow-key navigation to Base UI. Set `orientation="
 DialogContent includes a portal, backdrop and scrollable popup. Base UI manages modal focus, Escape and restoring focus. Supply a title and description. For asynchronous actions, control `open` / `onOpenChange` and close only after success instead of wrapping the submit action in DialogClose.
 
 For popup theme inheritance, put `data-theme` on the document root; portals mount outside local containers. Styling wrappers accept `className` and Base UI state callbacks. Use Base UI's `render` prop to compose triggers with Button. Button rendered as an anchor also needs `nativeButton={false}`.
+
+## Floating actions and details
+
+[Tooltip](components/tooltip.md) provides a short, non-interactive explanation on hover or focus. Keep essential instructions visible. Use [Popover](components/popover.md) for a panel with controls and [DropdownMenu](components/dropdown-menu.md) for an action menu with keyboard navigation. All floating content uses the document-root theme. Compose triggers with `render={<Button />}`.
+
+[Collapsible](components/collapsible.md) expands a single optional section; use Accordion for a related set of sections. [Toggle](components/toggle.md) exposes a pressed state, while [ToggleGroup](components/toggle-group.md) groups related choices. ToggleGroup values are arrays, including in single-selection mode; an empty array means no selection.
+
+[Slider](components/slider.md) supports a number or a range. Put the track and thumbs in SliderControl, label the control and give each range thumb a distinct accessible name. Its reference includes the compound hierarchy and disabled state.
+
+## Identity, loading and tables
+
+[Avatar](components/avatar.md) provides an image and fallback. Give the image meaningful alternative text, or use empty alternative text when adjacent text already names the person. [Skeleton](components/skeleton.md) is a static visual placeholder; describe loading on the containing region rather than announcing each shape.
+
+[Table](components/table.md) provides native table markup inside a horizontal scroll container. Use a caption and column headers; align numeric values to the right. Sorting, filtering, selection and pagination remain application behavior and are not included in this item.

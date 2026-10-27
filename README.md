@@ -14,7 +14,7 @@ https://sogud.github.io/zhi/playground/
 
 White Paper (白纸), Xuan Paper (宣纸), Ink Paper (墨纸) and Bamboo (青竹) share the same component structure. Change `data-theme` to `baizhi`, `xuanzhi`, `mozhi` or `qingzhu`.
 
-Includes **16 components**: Button, Input, Textarea, Label, Checkbox, RadioGroup, Switch, Select, Card, Badge, Separator, Alert, Progress, Tabs, Accordion and Dialog. See the [component catalog and usage](docs/components.md). Compound exports such as CardTitle and DialogContent belong to their parent component and are not counted separately.
+Includes **26 components**: Button, Input, Textarea, Label, Checkbox, RadioGroup, Switch, Select, Card, Badge, Separator, Alert, Progress, Tabs, Accordion, Dialog, Tooltip, Popover, DropdownMenu, Collapsible, Slider, Toggle, ToggleGroup, Avatar, Skeleton and Table. See the [component catalog and usage](docs/components.md). Compound exports such as CardTitle and DialogContent belong to their parent component and are not counted separately.
 
 ## Local development
 

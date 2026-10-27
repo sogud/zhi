@@ -54,4 +54,4 @@ pnpm dlx shadcn@latest add @zhi/button --dry-run
 
 ## 纸面与界栏
 
-`.zhi-paper` 叠加细微纸纹，组件默认不启用。多行书写区可选择 `.zhi-paper-ruled` 添加 24 px 淡界栏；纸纹和界栏不会改变输入行为。按钮默认直角，`variant="seal"` 提供朱色双边印章效果。
+`.zhi-paper` 叠加细微纸纹，组件默认不启用。多行书写区可选择 `.zhi-paper-ruled` 添加 24 px 淡界栏；纸纹和界栏不会改变输入行为。按钮默认使用 4 px 微圆角，`variant="seal"` 提供朱色双边印章效果。
