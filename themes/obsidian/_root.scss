@@ -1,0 +1,211 @@
+/* ========================================
+   Xuan Theme - Root Variables
+   根变量：字体、间距、圆角、动画
+======================================== */
+
+@font-face {
+  font-family: "Xuan WenKai";
+  src:
+    local("LXGW WenKai"),
+    local("LXGW WenKai Regular"),
+    local("霞鹜文楷");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Xuan WenKai";
+  src:
+    local("LXGW WenKai Medium"),
+    local("霞鹜文楷 Medium");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Xuan WenKai Mono";
+  src:
+    local("LXGW WenKai Mono"),
+    local("LXGW WenKai Mono Regular");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  /* ───────────────────────────────────────
+     Fonts（宣纸 + 宋韵 推荐搭配见下）
+     ─────────────────────────────────────── */
+  --xuan-font-ui: "Xuan WenKai", "LXGW WenKai", "霞鹜文楷", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", var(--font-interface), sans-serif;
+  --xuan-font-text: "Xuan WenKai", "LXGW WenKai", "霞鹜文楷", var(--font-text), "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --xuan-font-serif: "Xuan WenKai", "LXGW WenKai", "霞鹜文楷", var(--font-text), serif;
+  --xuan-font-mono: "Xuan WenKai Mono", "LXGW WenKai Mono", "Source Code Pro", var(--font-monospace), monospace;
+  --xuan-font-sans: var(--xuan-font-text);
+
+  /* Compatibility（片段里若用到） */
+  --font-text-zh: "Xuan WenKai", "LXGW WenKai", "霞鹜文楷", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  
+  /* ───────────────────────────────────────
+     Sizes
+     ─────────────────────────────────────── */
+  --font-ui-smaller: 12px;
+  --font-ui-small: 13px;
+  --font-ui-medium: 15px;
+  --font-ui-large: 20px;
+  
+  --header-height: 48px;
+  --tab-height: 44px;
+  --input-height: 32px;
+
+  /* ───────────────────────────────────────
+     Spacing
+     ─────────────────────────────────────── */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 12px;
+  --spacing-l: 16px;
+  --spacing-xl: 24px;
+  
+  /* ───────────────────────────────────────
+     Radius
+     ─────────────────────────────────────── */
+  --radius-s: 2px;
+  --radius-m: 3px;
+  --radius-l: 4px;
+  --radius-xl: 6px;
+  --xuan-radius-control: 2px;
+  --button-radius: var(--xuan-radius-control);
+  --input-radius: var(--xuan-radius-control);
+  --dropdown-radius: var(--xuan-radius-control);
+  --modal-radius: var(--radius-m);
+  --tag-radius: var(--radius-m);
+  --checkbox-radius: 2px;
+  --xuan-switch-radius: 0px;
+  --xuan-switch-thumb-radius: 0px;
+  --xuan-switch-width: 44px;
+  --xuan-switch-height: 24px;
+  --xuan-switch-thumb-width: 20px;
+  --xuan-switch-thumb-height: 20px;
+  --xuan-switch-inset: 2px;
+  --xuan-switch-track: var(--interactive-normal);
+  --xuan-switch-track-hover: var(--interactive-hover);
+  --xuan-switch-track-enabled: var(--interactive-active);
+  --xuan-switch-border: var(--background-modifier-border);
+  --xuan-switch-border-enabled: var(--background-modifier-border-hover);
+  --xuan-switch-thumb: var(--background-primary);
+  --xuan-switch-thumb-enabled: var(--background-primary);
+  --toggle-radius: var(--xuan-switch-radius);
+  --toggle-thumb-radius: var(--xuan-switch-thumb-radius);
+  --toggle-width: var(--xuan-switch-width);
+  --toggle-height: var(--xuan-switch-height);
+  --toggle-thumb-width: var(--xuan-switch-thumb-width);
+  --toggle-thumb-height: var(--xuan-switch-thumb-height);
+  --toggle-background: var(--xuan-switch-track);
+  --toggle-background-active: var(--xuan-switch-track-enabled);
+  --toggle-border-color: var(--xuan-switch-border);
+  --toggle-border-color-active: var(--xuan-switch-border-enabled);
+  --toggle-thumb-color: var(--xuan-switch-thumb);
+  --toggle-thumb-color-active: var(--xuan-switch-thumb-enabled);
+  --tab-radius: var(--radius-s);
+  --tab-radius-active: var(--tab-radius) var(--tab-radius) 0 0;
+  --prompt-border-radius: var(--modal-radius);
+  --menu-radius: var(--radius-m);
+  --popover-radius: var(--radius-m);
+  --slider-thumb-radius: 2px;
+  --slider-track-radius: 2px;
+  --nav-item-radius: var(--radius-s);
+  --metadata-input-radius: var(--xuan-radius-control);
+  --embed-border-radius: var(--radius-m);
+  
+  /* ───────────────────────────────────────
+     Shadows
+     ─────────────────────────────────────── */
+  /* Shadow uses warm ink-rgb; per-theme can override --xuan-shadow-rgb. */
+  --xuan-shadow-rgb: 45 38 32;
+  --shadow-s: 0 1px 2px rgb(var(--xuan-shadow-rgb) / 0.08), 0 4px 14px rgb(var(--xuan-shadow-rgb) / 0.06);
+  --shadow-m: 0 2px 6px rgb(var(--xuan-shadow-rgb) / 0.10), 0 14px 30px rgb(var(--xuan-shadow-rgb) / 0.08);
+  --shadow-l: 0 4px 12px rgb(var(--xuan-shadow-rgb) / 0.12), 0 22px 56px rgb(var(--xuan-shadow-rgb) / 0.10);
+
+  /* Elevations for UI surfaces (menus/modals). */
+  --xuan-elevation-1: 0 1px 0 rgb(var(--xuan-shadow-rgb) / 0.06), 0 10px 24px rgb(var(--xuan-shadow-rgb) / 0.07);
+  --xuan-elevation-2: 0 2px 0 rgb(var(--xuan-shadow-rgb) / 0.08), 0 16px 34px rgb(var(--xuan-shadow-rgb) / 0.10);
+  --xuan-elevation-3: 0 2px 0 rgb(var(--xuan-shadow-rgb) / 0.10), 0 22px 64px rgb(var(--xuan-shadow-rgb) / 0.12);
+  
+  /* ───────────────────────────────────────
+     Animation（减少动画：时长为 0，需恢复时改为 150ms / 250ms）
+     ─────────────────────────────────────── */
+  --anim-duration-fast: 0ms;
+  --anim-duration-moderate: 0ms;
+  --anim-duration-slow: 0ms;
+  --anim-motion-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ───────────────────────────────────────
+     Typography tokens（统一行高，减少对齐乱）
+     ─────────────────────────────────────── */
+  --xuan-leading-body: 1.82;
+  --xuan-leading-head: 1.26;
+  /* 编辑区、阅读视图、列表共用，Obsidian 也会读 --line-height-normal */
+  --line-height-normal: var(--xuan-leading-body);
+
+  --xuan-h1: 28px;
+  --xuan-h2: 22px;
+  --xuan-h3: 18px;
+
+  /* ───────────────────────────────────────
+     Paper texture (subtle, can be disabled)
+     ─────────────────────────────────────── */
+  --xuan-texture-enabled: 1;
+  --xuan-texture-opacity: 0.035;
+  --xuan-texture-alpha: calc(var(--xuan-texture-opacity) * var(--xuan-texture-enabled));
+  --xuan-focus-ring: rgb(166 90 82 / 0.14);
+  
+  /* ───────────────────────────────────────
+     Icon
+     ─────────────────────────────────────── */
+  --icon-size: 15px;
+  --icon-stroke: 1.65px;
+  --icon-opacity: 0.58;
+  --icon-opacity-hover: 0.86;
+  
+  /* ───────────────────────────────────────
+     Density
+     ─────────────────────────────────────── */
+  --density-modifier: 1;
+
+  /* ───────────────────────────────────────
+     Layout / Component (复用 spacing，减少魔法数字)
+     ─────────────────────────────────────── */
+  --ribbon-padding-x: var(--spacing-m);
+  --view-header-padding: var(--spacing-xs) 10px;
+  --view-header-min-height: 36px;
+  --sidedock-content-padding: 2px 6px 2px var(--spacing-l);
+  --nav-header-padding: var(--spacing-s) var(--spacing-l);
+  --tab-inner-padding-x: var(--spacing-s);
+  --tab-inner-padding-y: var(--spacing-s);
+  --button-padding-block: var(--spacing-s);
+  --button-padding-inline: var(--spacing-l);
+  --dropdown-padding-block: 0;
+  --dropdown-padding-inline: 10px 30px;
+  --dropdown-background-position: right 10px center;
+  --dropdown-background-size: 14px;
+  --input-border-width: 1px;
+  --focus-ring-width: 3px;
+  --code-inline-padding: 2px var(--spacing-s);
+  --code-inline-font-size: 0.85em;
+  --code-block-padding: var(--spacing-m);
+  --table-cell-padding-th: var(--spacing-s) 14px;
+  --table-cell-padding: 6px 14px;
+  --blockquote-padding: 10px 18px;
+  --blockquote-margin: 18px 0;
+  --tag-height: 22px;
+  --tag-padding-x: 10px;
+  --list-indent: 1.5em;
+  --task-checkbox-size: 16px;
+  --media-margin-block: var(--spacing-l);
+  --checkbox-toggle-width: var(--xuan-switch-width);
+  --checkbox-toggle-height: var(--xuan-switch-height);
+  --checkbox-toggle-thumb: var(--xuan-switch-thumb-width);
+  --checkbox-toggle-offset: calc(var(--xuan-switch-inset) - var(--input-border-width));
+}

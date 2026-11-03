@@ -1,6 +1,8 @@
 # 纸 · Zhi
 
-A Base UI component library with Chinese-inspired typography, generous spacing and four paper themes. Components are distributed as source through a shadcn Registry.
+Zhi is a design-system monorepo for Web components and editor themes, with Chinese-inspired typography, whitespace and ink-toned surfaces. Zhi UI uses Base UI and distributes component source through a shadcn Registry.
+
+Zhi is the shared brand for **Zhi UI** and **[Zhi Themes](docs/themes.md)**, the editor themes formerly named Xuan. Platform theme palettes are still maintained separately.
 
 Version: **0.3.0 Preview**. [Documentation](https://sogud.github.io/zhi/) · [Components](https://sogud.github.io/zhi/docs/components/) · [Design resources](https://sogud.github.io/zhi/docs/resources/).
 
@@ -16,6 +18,17 @@ White Paper (白纸), Xuan Paper (宣纸), Ink Paper (墨纸) and Bamboo (青竹
 
 Includes **26 components**: Button, Input, Textarea, Label, Checkbox, RadioGroup, Switch, Select, Card, Badge, Separator, Alert, Progress, Tabs, Accordion, Dialog, Tooltip, Popover, DropdownMenu, Collapsible, Slider, Toggle, ToggleGroup, Avatar, Skeleton and Table. See the [component catalog and usage](docs/components.md). Compound exports such as CardTitle and DialogContent belong to their parent component and are not counted separately.
 
+## Repository layout
+
+- `design/`: shared design specification and Web theme tokens.
+- `registry/`: Zhi UI source components.
+- `src/` and `docs/`: the shared website and canonical documentation.
+- `themes/obsidian/`: Obsidian SCSS and release files.
+- `themes/zed/`: native Zed themes.
+- `themes/vscode/`: VS Code extension source and its independent manifest.
+
+Editor themes were imported from `sogud/xuan-theme`, including the local Zhi branding changes. The former repository remains as a compatibility reference. No second website or dependency lockfile is maintained for the theme adapters.
+
 ## Local development
 
 ```sh
@@ -24,7 +37,7 @@ pnpm build
 pnpm dev
 ```
 
-Node.js 24, pnpm and `zip` are required for the complete documentation/distribution build. `pnpm build` regenerates the Registry, bundled Skill references/assets, downloads and static documentation pages. The maintained Skill entrypoint is `skills/zhi/SKILL.md`; generated references and assets are committed so skills CLI installs work without a build.
+Node.js 24, pnpm and `zip` are required for the complete documentation/distribution build. `pnpm build` regenerates the Registry, editor theme downloads, bundled Skill references/assets and static documentation pages. `pnpm themes:build` builds only Obsidian CSS and the three platform download archives. The VS Code archive contains extension source; VSIX packaging and platform publication remain separate steps. The maintained Skill entrypoint is `skills/zhi/SKILL.md`; generated references and assets are committed so skills CLI installs work without a build.
 
 ## Install components
 

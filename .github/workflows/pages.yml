@@ -25,10 +25,11 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - uses: actions/configure-pages@v6
+        id: pages
       - run: pnpm build
         env:
-          DOCS_BASE_PATH: /zhi/
-      - uses: actions/configure-pages@v6
+          DOCS_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

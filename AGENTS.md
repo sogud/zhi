@@ -8,4 +8,7 @@
 - Verify changed components in the preview and run the relevant package scripts. Report design drafts, working components, install checks and publication separately.
 
 - Docs in `docs/` feed the site and generated Skill references. Edit canonical docs/assets, then run `pnpm build`; do not edit generated `skills/zhi/references/` or `skills/zhi/assets/` directly.
-- GitHub Pages builds with `DOCS_BASE_PATH=/zhi/`; check nested page links and Registry URLs against that prefix.
+- GitHub Pages derives `DOCS_BASE_PATH` from `actions/configure-pages`: `/zhi/` for the project URL, `/` for a custom domain. Check nested page links and Registry URLs against the deployed base path.
+
+- Editor themes live in `themes/obsidian`, `themes/zed` and `themes/vscode`. Build from the repository root with `pnpm themes:build`; keep platform manifests and compatibility IDs independent from the UI Registry.
+- Obsidian SCSS is compiled to `themes/obsidian/theme.css`; Zed and VS Code JSON files are native sources. Platform colors are preserved pending a separate token migration. Do not treat them as generated from `design/tokens.json` yet.

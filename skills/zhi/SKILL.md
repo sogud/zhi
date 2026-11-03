@@ -29,12 +29,14 @@ Zhi uses Base UI. Compose triggers with `render={<Button />}`; Radix's `asChild`
 
 Let spacing, alignment and type establish hierarchy. Brush, ink, paper and inkstone inform type, contrast and surfaces rather than requiring literal illustrations. Use Noto Sans SC for controls and body text, and Noto Serif SC sparingly for display headings. Keep primary actions visually clear and group related controls before adding containers.
 
-Use semantic classes such as `bg-background`, `text-foreground`, `border-border` and `text-muted-foreground`. Start with the component's supplied variants. Use the shared 4 px spacing scale and 36 px default controls. Control and panel radius tokens are 4 px and 8 px respectively. Use restrained corners for visual consistency; switches and radio controls keep familiar shapes. Do not infer zero-radius controls from the paper metaphor.
+Use semantic classes such as `bg-background`, `text-foreground`, `border-border` and `text-muted-foreground`. Start with the component's supplied variants. For desktop Web, use the shared 4 px spacing scale and 36 px default controls. Control and panel radius tokens are 4 px and 8 px respectively. Use restrained corners for visual consistency; switches and radio controls keep familiar shapes. Do not infer zero-radius controls from the paper metaphor.
 
 Set `data-theme="baizhi"`, `"xuanzhi"`, `"mozhi"` or `"qingzhu"` on the document root so portaled floating contents inherit the theme. White Paper draws on snow and paper; Xuan Paper is warmer; Ink Paper is dark; Green Bamboo uses a bamboo-green emphasis. Change theme values together instead of adding unrelated colors to individual controls. In the Zhi repository, edit `design/tokens.json` and regenerate; the bundled assets are a distribution snapshot.
 
 
 Treat ink, paper, seals, bamboo, snow, clouds and rain as optional aesthetic references, not a checklist of illustrations. Build a coherent composition through type, alignment, spacing and color first. Default surfaces are plain; add motifs, paper grain, ruling or the seal variant only when the concrete brief calls for them. Do not infer decorative placement from a component name or theme name.
+
+For PC, TV, iPad or dual-screen design, read the multi-device section of the design reference first. Share the modern Chinese visual language, then adapt layout, input, focus and density to the platform. The Registry remains React Web source: it does not supply native TV/iPad components or D-pad navigation. Do not turn the desktop dimensions into universal device defaults or infer device acceptance from a browser preview.
 
 The Figma snapshot and original component SVGs record the older three-theme, rounded design. Current tokens and component source govern current geometry and the Green Bamboo theme. Regenerate bundled references and assets from their project sources rather than editing generated copies.
 

@@ -1,0 +1,41 @@
+{
+  "name": "xuan-theme",
+  "displayName": "Zhi Themes",
+  "description": "Paper and ink themes from the Zhi design family.",
+  "version": "0.1.0",
+  "publisher": "changshun",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "scripts": {
+    "package": "npx @vscode/vsce package"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Zhi Light",
+        "uiTheme": "vs",
+        "path": "./xuan-light.json",
+        "id": "Xuan Light"
+      },
+      {
+        "label": "Zhi Dark",
+        "uiTheme": "vs-dark",
+        "path": "./xuan-dark.json",
+        "id": "Xuan Dark"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sogud/zhi.git",
+    "directory": "themes/vscode"
+  },
+  "homepage": "https://sogud.github.io/zhi/docs/themes/",
+  "bugs": {
+    "url": "https://github.com/sogud/zhi/issues"
+  }
+}

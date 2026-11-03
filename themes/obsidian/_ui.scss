@@ -1,0 +1,373 @@
+/* ========================================
+   Xuan Theme - UI
+   Obsidian UI components: settings, modals, menus, inputs, notices
+   Layout / spacing
+======================================== */
+
+/* 图标按钮统一点击区 */
+.clickable-icon {
+  padding: var(--spacing-s);
+  max-height: 100%;
+}
+
+body,
+.workspace,
+.modal,
+.prompt,
+.menu,
+.suggestion-container {
+  font-family: var(--xuan-font-ui);
+}
+
+.clickable-icon,
+.workspace-tab-header-inner-icon,
+.view-action,
+.side-dock-ribbon-action,
+.nav-action-button {
+  color: var(--text-muted);
+  opacity: var(--icon-opacity);
+}
+
+.clickable-icon svg,
+.workspace-tab-header-inner-icon svg,
+.view-action svg,
+.side-dock-ribbon-action svg,
+.nav-action-button svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  stroke-width: var(--icon-stroke);
+}
+
+.clickable-icon:hover,
+.workspace-tab-header:hover .workspace-tab-header-inner-icon,
+.view-action:hover,
+.side-dock-ribbon-action:hover,
+.nav-action-button:hover {
+  color: var(--text-normal);
+  opacity: var(--icon-opacity-hover);
+}
+
+/* ───────────────────────────────────────
+   Buttons（统一尺寸与轻量阴影）
+   ─────────────────────────────────────── */
+/* 普通按钮、设置页按钮、弹窗按钮 */
+button:not(.clickable-icon):not(.sidebar-toggle-button .clickable-icon),
+.button {
+  border-radius: var(--xuan-radius-control);
+  min-height: var(--input-height) !important;
+  padding: var(--button-padding-block) var(--button-padding-inline) !important;
+  display: inline-flex;
+  box-shadow: none;
+}
+
+button:not(.mod-cta):not(.mod-warning):not(.mod-danger),
+.button:not(.mod-cta):not(.mod-warning):not(.mod-danger) {
+  background-color: var(--interactive-normal);
+  color: var(--text-normal);
+}
+
+button:hover,
+.button:hover {
+  background-color: var(--interactive-hover);
+}
+
+button:active,
+.button:active {
+  background-color: var(--interactive-active);
+}
+
+/* Primary (stamp)：仅保留极轻描边感，不用大块阴影 */
+button.mod-cta,
+.button.mod-cta {
+  background-color: var(--interactive-accent);
+  border: var(--input-border-width) solid var(--interactive-accent);
+  color: var(--text-on-accent);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.06);
+}
+
+button.mod-cta:hover,
+.button.mod-cta:hover {
+  background-color: var(--interactive-accent-hover);
+  border-color: var(--interactive-accent-hover);
+  box-shadow: 0 var(--input-border-width) 0 rgb(0 0 0 / 0.08);
+}
+
+button.mod-cta:active,
+.button.mod-cta:active {
+  background-color: var(--interactive-accent-hover);
+  border-color: var(--interactive-accent-hover);
+  box-shadow: none;
+  filter: brightness(0.96);
+}
+
+/* ───────────────────────────────────────
+   Inputs
+   ─────────────────────────────────────── */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.search-input-container input,
+.prompt-input {
+  border-radius: var(--xuan-radius-control);
+  border: var(--input-border-width) solid var(--background-modifier-border);
+  background-color: var(--background-modifier-form-field);
+  color: var(--text-normal);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.03) inset;
+}
+
+input[type="text"]:hover,
+input[type="search"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover,
+.search-input-container input:hover,
+.prompt-input:hover {
+  border-color: var(--background-modifier-border-hover);
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+.search-input-container input:focus,
+.prompt-input:focus {
+  border-color: var(--background-modifier-border-focus);
+  box-shadow:
+    0 0 0 var(--focus-ring-width) var(--xuan-focus-ring),
+    0 1px 0 rgb(0 0 0 / 0.03) inset;
+  outline: none;
+}
+
+select,
+.dropdown,
+.setting-item-control select,
+.metadata-property-value select {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: var(--input-height);
+  border-radius: var(--dropdown-radius);
+  border: var(--input-border-width) solid var(--background-modifier-border);
+  background-color: var(--background-modifier-form-field);
+  background-image: var(--dropdown-background);
+  background-position: var(--dropdown-background-position);
+  background-repeat: no-repeat;
+  background-size: var(--dropdown-background-size);
+  color: var(--text-normal);
+  font-family: var(--xuan-font-ui);
+  line-height: 1;
+  padding-block: var(--dropdown-padding-block);
+  padding-inline: var(--dropdown-padding-inline);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.03) inset;
+}
+
+select:hover,
+.dropdown:hover,
+.setting-item-control select:hover,
+.metadata-property-value select:hover {
+  border-color: var(--background-modifier-border-hover);
+  background-color: var(--interactive-hover);
+}
+
+select:focus,
+.dropdown:focus,
+.setting-item-control select:focus,
+.metadata-property-value select:focus {
+  border-color: var(--background-modifier-border-focus);
+  box-shadow:
+    0 0 0 var(--focus-ring-width) var(--xuan-focus-ring),
+    0 1px 0 rgb(0 0 0 / 0.03) inset;
+  outline: none;
+}
+
+select option {
+  background-color: var(--xuan-surface-1, var(--background-primary));
+  color: var(--text-normal);
+}
+
+/* ───────────────────────────────────────
+   Menus & Suggestions
+   ─────────────────────────────────────── */
+.menu,
+.suggestion-container {
+  background-color: var(--xuan-surface-1, var(--background-secondary));
+  border: var(--input-border-width) solid var(--xuan-divider, var(--divider-color));
+  border-radius: var(--radius-m);
+  box-shadow: var(--xuan-elevation-2, none);
+  overflow: hidden;
+}
+
+.menu-item,
+.suggestion-item {
+  border-radius: 0;
+  color: var(--text-normal);
+}
+
+.menu-item:hover,
+.suggestion-item:hover,
+.menu-item.is-selected,
+.suggestion-item.is-selected {
+  background-color: var(--background-modifier-hover);
+}
+
+/* ───────────────────────────────────────
+   Modals & Prompts
+   ─────────────────────────────────────── */
+.modal,
+.prompt {
+  background-color: var(--xuan-surface-1, var(--background-primary));
+  border: var(--input-border-width) solid var(--xuan-divider, var(--divider-color));
+  border-radius: var(--radius-m);
+  box-shadow: var(--xuan-elevation-3, none);
+}
+
+.modal-title,
+.prompt-title {
+  font-family: var(--xuan-font-serif);
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--text-normal);
+}
+
+/* ───────────────────────────────────────
+   Settings
+   ─────────────────────────────────────── */
+/* 设置页垂直标签侧边栏 */
+.vertical-tab-header-group-items {
+  gap: 2px;
+}
+
+.vertical-tab-header-group-item {
+  padding: var(--button-padding-block) var(--button-padding-inline) !important;
+  border-radius: var(--radius-s);
+  margin: 0 var(--spacing-xs);
+}
+
+.vertical-tab-header-group-item:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.vertical-tab-header-group-item.is-active {
+  background-color: var(--background-modifier-active-hover);
+}
+
+.setting-item {
+  border-top: var(--input-border-width) solid var(--xuan-divider, var(--divider-color));
+}
+
+.setting-item:first-child {
+  border-top: none;
+}
+
+.setting-item-name {
+  color: var(--text-normal);
+}
+
+.setting-item-description {
+  color: var(--text-muted);
+}
+
+/* Switch / Toggle（设置页等）：固定尺寸、无重阴影 */
+body.theme-light .checkbox-container,
+body.theme-dark .checkbox-container {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: var(--xuan-switch-width) !important;
+  min-width: var(--xuan-switch-width) !important;
+  height: var(--xuan-switch-height) !important;
+  min-height: var(--xuan-switch-height) !important;
+  border-radius: var(--xuan-switch-radius) !important;
+  border: var(--input-border-width) solid var(--xuan-switch-border);
+  background-color: var(--xuan-switch-track);
+  box-shadow: none;
+  padding: 0;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+body.theme-light .checkbox-container .checkbox,
+body.theme-light .checkbox-container > div,
+body.theme-light .checkbox-container::before,
+body.theme-light .checkbox-container::after,
+body.theme-dark .checkbox-container .checkbox,
+body.theme-dark .checkbox-container > div,
+body.theme-dark .checkbox-container::before,
+body.theme-dark .checkbox-container::after {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  width: var(--xuan-switch-thumb-width) !important;
+  height: var(--xuan-switch-thumb-height) !important;
+  top: 50% !important;
+  left: var(--checkbox-toggle-offset) !important;
+  border-radius: var(--xuan-switch-thumb-radius) !important;
+  box-shadow: none;
+  background-color: var(--xuan-switch-thumb);
+  border: none;
+  margin: 0;
+  transform: translateY(-50%) !important;
+}
+
+body.theme-light .checkbox-container.is-enabled .checkbox,
+body.theme-light .checkbox-container.is-enabled > div,
+body.theme-light .checkbox-container.is-enabled::before,
+body.theme-light .checkbox-container.is-enabled::after,
+body.theme-dark .checkbox-container.is-enabled .checkbox,
+body.theme-dark .checkbox-container.is-enabled > div,
+body.theme-dark .checkbox-container.is-enabled::before,
+body.theme-dark .checkbox-container.is-enabled::after {
+  transform: translateX(calc(var(--xuan-switch-width) - (var(--input-border-width) * 2) - var(--xuan-switch-thumb-width) - (var(--checkbox-toggle-offset) * 2))) translateY(-50%) !important;
+  background-color: var(--xuan-switch-thumb-enabled);
+  border: none;
+}
+
+/* Obsidian 默认用 .checkbox-container > div 作为滑块，兼容 */
+body.theme-light .checkbox-container > div,
+body.theme-light .checkbox-container::before,
+body.theme-light .checkbox-container::after,
+body.theme-dark .checkbox-container > div,
+body.theme-dark .checkbox-container::before,
+body.theme-dark .checkbox-container::after {
+  box-shadow: none;
+}
+
+body.theme-light .checkbox-container:hover,
+body.theme-dark .checkbox-container:hover {
+  background-color: var(--xuan-switch-track-hover);
+  border-color: var(--xuan-switch-border-enabled);
+}
+
+body.theme-light .checkbox-container.is-enabled,
+body.theme-dark .checkbox-container.is-enabled {
+  background-color: var(--xuan-switch-track-enabled);
+  border-color: var(--xuan-switch-border-enabled);
+}
+
+body.theme-light .checkbox-container.is-enabled:hover,
+body.theme-dark .checkbox-container.is-enabled:hover {
+  background-color: color-mix(in oklch, var(--xuan-switch-track-enabled) 84%, var(--xuan-switch-thumb-enabled));
+}
+
+/* ───────────────────────────────────────
+   Notices (toast)
+   ─────────────────────────────────────── */
+.notice {
+  background-color: var(--xuan-surface-1, var(--background-secondary));
+  border: var(--input-border-width) solid var(--xuan-divider, var(--divider-color));
+  color: var(--text-normal);
+  border-radius: var(--radius-s);
+  box-shadow: var(--xuan-elevation-2, none);
+}
+
+/* Empty panes use actions as navigation affordances, not destructive/accent actions. */
+.empty-state-action {
+  color: var(--text-muted);
+}
+
+.empty-state-action:hover {
+  color: var(--text-normal);
+}

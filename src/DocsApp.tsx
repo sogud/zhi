@@ -14,7 +14,7 @@ import { Label } from "@/registry/ui/label";
 import { Input } from "@/registry/ui/input";
 import { Switch } from "@/registry/ui/switch";
 
-const guides = ["installation", "design", "resources", "agent-skill", "components"];
+const guides = ["installation", "design", "resources", "themes", "agent-skill", "components"];
 
 export function DocsApp() {
   const route = decodeURIComponent(location.pathname.slice(base.length)).replace(/\/$/, "");
@@ -55,7 +55,7 @@ export function DocsApp() {
       <a className="skip-link" href="#main-content">跳到正文</a>
       <header className="docs-header">
         <a href={base} className="brand"><span className="brand-mark">纸</span><span>Zhi</span></a>
-        <nav aria-label="主导航"><a href={docHref("installation")}>文档</a><a href={base + "playground/"}>组件预览</a><a href={base + "examples/"}>应用示例</a><a href={docHref("agent-skill")}>Skill</a><a href={site.repository}>GitHub</a></nav>
+        <nav aria-label="主导航"><a href={docHref("installation")}>文档</a><a href={base + "playground/"}>组件预览</a><a href={base + "examples/"}>应用示例</a><a href={docHref("themes")}>编辑器主题</a><a href={docHref("agent-skill")}>Skill</a><a href={site.repository}>GitHub</a></nav>
         <div className="docs-themes" role="group" aria-label="主题">
           {tokens.themes.map((item) => <button key={item.id} type="button" aria-pressed={theme === item.id} onClick={() => setTheme(item.id)}>{item.name}</button>)}
         </div>
@@ -63,7 +63,7 @@ export function DocsApp() {
       {!route ? (
         <main id="main-content" className="home-main">
           <section className="home-hero">
-            <div className="home-copy"><p className="home-note">纸 · Zhi / 开源组件库</p><h1>排版有序，<br />留白有度。</h1><p className="home-description">原生、简洁，让注意力回到重要的事情。<br />基于 Base UI，以源码交付你的界面。</p><div className="home-actions"><Button render={<a href={docHref("installation")} />} nativeButton={false}>开始使用</Button><Button variant="outline" render={<a href={docHref("components")} />} nativeButton={false}>浏览 {components.length} 个组件</Button></div><p className="home-stack">React · Tailwind CSS v4 · shadcn Registry</p></div>
+            <div className="home-copy"><p className="home-note">纸 · Zhi / 组件与编辑器主题</p><h1>排版有序，<br />留白有度。</h1><p className="home-description">原生、简洁，让注意力回到重要的事情。<br />基于 Base UI，以源码交付你的界面。</p><div className="home-actions"><Button render={<a href={docHref("installation")} />} nativeButton={false}>开始使用</Button><Button variant="outline" render={<a href={docHref("components")} />} nativeButton={false}>浏览 {components.length} 个组件</Button></div><p className="home-stack">React · Tailwind CSS v4 · shadcn Registry</p></div>
             <div className="home-specimen">
               <Card>
                 <CardHeader>
@@ -85,7 +85,7 @@ export function DocsApp() {
             </div>
           </section>
           <section className="home-principles"><div><h2>留白</h2><p>给内容足够的空间，分清主次。</p></div><div><h2>对齐</h2><p>从标签到正文，让关系一目了然。</p></div><div><h2>墨色</h2><p>以浓淡表达层级，以朱色标注焦点。</p></div></section>
-          <section className="home-bottom"><div><h2>给人用，也给 Agent 用。</h2><p>组件源码、设计 tokens 与 Skill，一起交付。</p></div><a href={docHref("agent-skill")}>了解 Zhi Skill</a><a href={docHref("resources")}>获取设计资源</a></section>
+          <section className="home-bottom"><div><h2>给人用，也给 Agent 用。</h2><p>组件源码、编辑器主题、设计 tokens 与 Skill，一起交付。</p></div><a href={docHref("agent-skill")}>了解 Zhi Skill</a><a href={docHref("resources")}>获取设计资源</a></section>
         </main>
       ) : route === "examples" ? (
         <main id="main-content"><ApplicationExamples /></main>
